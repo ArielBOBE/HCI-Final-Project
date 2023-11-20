@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/icons/home.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="navbar" id="Navbar">
+            <a href="index.html">
+                <img src="assets/logo.png" class="logo">
+            </a>
+            <a class="navbar-text" href="index.html">HOME</a>
+            <a class="navbar-text" href="about.html">ABOUT US</a>
+            <a class="navbar-text" href="feedback.html">FEEDBACK</a>
+            <a href="javascript:void(0);" class="icon" onclick="onClick()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <form class="feedback-form" action="laptopRec.html">
+        <!-- Form Starts Here -->
+
+        <label for="purpose"><b>Purpose :</b></label>
+
+        <select id="purpose" name="purpose">
+            <option value="" selected disabled>Select a purpose for using the laptop/computer</option>
+            <option value="coding">Coding</option>
+            <option value="design">Design</option>
+            <option value="games">Play Video Games</option>
+        </select>
+
+        <label for="purpose"><b>Preferred Price :</b></label>
+
+        <select id="purpose" name="purpose">
+            <option value="" selected disabled>Select a price range</option>
+            <option value="cheap">IDR 5.000.000,00 - IDR 10.000.000,00</option>
+            <option value="normal">IDR 10.000.000,00 - IDR 20.000.000,00</option>
+            <option value="expensive">IDR 20.000.000,00 - IDR 30.000.000,00</option>
+        </select>
+
+        <label for="purpose"><b>Preferred Storage Size :</b></label>
+
+        <select id="purpose" name="purpose">
+            <option value="" selected disabled>Select a storage size</option>
+            <option value="small">256 GB</option>
+            <option value="medium">512 GB</option>
+            <option value="large">1 TB</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function onClick() {
+            var x = document.getElementById("Navbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
