@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FeedBack </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="background">
+    <div class="navbar" id="Navbar">
+      <a href="index.html">
+        <img src="assets/logo.png" class="logo">
+      </a>
+      <a class="navbar-text" href="index.html">HOME</a>
+      <a class="navbar-text" href="about.html">ABOUT US</a>
+      <a class="navbar-text" href="feedback.html">FEEDBACK</a>
+      <a href="javascript:void(0);" class="icon" onclick="onClick()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+  <fieldset class="feedback-form">
+    <legend class="feedback-label"><b>FeedBack</b></legend>
+    <form action="feedback-received.html">
+      <!-- Form Starts Here -->
+      <div class="row">
+        <div class="col-label">
+          <label for="firstName"><b>Name :</b></label>
+        </div>
+        <div class="col-input">
+          <input type="text" placeholder="First Name" name="firstName" required>
+          <input type="text" placeholder="Last Name" name="lastName" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-label">
+          <label for="email"><b>Email :</b></label>
+        </div>
+        <div class="col-input">
+          <input type="email" placeholder="Enter Email" name="email" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-label">
+          <label for="feedback-message"><b>Message :</b></label>
+        </div>
+        <div class="col-input">
+          <textarea rows="4" cols="50" placeholder="Type your message here..." name="msg" required></textarea><br>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Submit" class="confirm-form">
+      </div>
+    </form>
+  </fieldset>
+
+  <script>
+    function onClick() {
+      var x = document.getElementById("Navbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
