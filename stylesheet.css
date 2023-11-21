@@ -153,6 +153,7 @@ body {
   color: white;
   text-transform: uppercase;
   cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
 
 .confirm-form:hover {
@@ -296,7 +297,6 @@ header {
   color: white;
   text-align: left;
   padding: 10px;
-  transition: box-shadow 0.5s ease-in-out;
 }
 
 .container-form div {
@@ -316,6 +316,7 @@ header {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
+  transition: box-shadow 0.5s ease-in-out;
 }
 
 .container-form select:hover {
@@ -327,6 +328,7 @@ header {
 .submit {
   color: white;
   text-transform: uppercase;
+  transition: box-shadow 0.5s ease-in-out;
 }
 
 .submit:hover {
