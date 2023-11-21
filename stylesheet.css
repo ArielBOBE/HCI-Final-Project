@@ -149,12 +149,6 @@ body {
   color: white;
 }
 
-.buttons:hover {
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    box-shadow: 0px 0px 20px 5px rgb(235, 173, 3);
-}
-
 .confirm-form {
   color: white;
   text-transform: uppercase;
@@ -162,7 +156,6 @@ body {
 }
 
 .confirm-form:hover {
-    cursor: pointer;
     transition: 0.5s ease-in-out;
     box-shadow: 0px 0px 20px 5px rgb(235, 173, 3);
 }
@@ -242,12 +235,6 @@ input[type=submit]:hover {
   width: 80%;
   margin-top: 6px;
   margin-right: 10px;
-}
-
-.col-input:hover {
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    box-shadow: 0px 0px 20px 5px white;
 }
 
 .row {
@@ -339,6 +326,7 @@ header {
 
 .submit {
   color: white;
+  text-transform: uppercase;
 }
 
 .submit:hover {
