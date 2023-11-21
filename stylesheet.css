@@ -149,6 +149,12 @@ body {
   color: white;
 }
 
+.buttons:hover {
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0px 0px 20px 5px rgb(235, 173, 3);
+}
+
 .confirm-form {
   color: white;
   text-transform: uppercase;
