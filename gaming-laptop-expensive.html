@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/icons/home.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="Jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".description").hide()
+            $(".details").click(function () {
+                $(".description").animate({ height: 'toggle' });
+                $(".details").text(($(".details").text() == "▲ DETAILS") ? "▼ DETAILS" : "▲ DETAILS");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="background">
+        <div class="navbar" id="Navbar">
+            <a href="index.html">
+                <img src="assets/logo.png" class="logo">
+            </a>
+            <a class="navbar-text" href="index.html">HOME</a>
+            <a class="navbar-text" href="about.html">ABOUT US</a>
+            <a class="navbar-text" href="feedback.html">FEEDBACK</a>
+            <a href="javascript:void(0);" class="icon" onclick="onClick()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    <!-- recommendation starts here -->
+    <!-- Instead of hiding the parent div hide the child div so that when it appears
+    it'll look like the parent div extends !! -->
+    <div class="container">
+        <table>
+            <tr>
+                <td class="r-data"><img src="https://p4-ofp.static.pub/fes/cms/2023/05/03/bmu28juvzzj0j2bn5funocd9bwsq92004719.png"
+                        class="laptop">
+                </td>
+                <td class="r-data"><figcaption>Review:</figcaption>
+                    <p class="review">Powered by the latest generation processors from AMD and NVIDIA's dedicated
+                        graphics, the Legion Slim 5 delivers formidable performance. <br> <br>
+                        Whether it's tackling demanding AAA titles or engaging in resource-intensive
+                        creative workloads, this laptop handles tasks with impressive speed and efficiency. <br> <br>
+                        The option for high refresh rate displays enhances the gaming experience, ensuring smooth
+                        visuals.</p>
+                </td>
+            </tr>
+        </table>
+        <!-- <div class="description"> -->
+        <figcaption>Lenovo Legion Slim 5: ≈ Rp. 23.000.000</figcaption>
+        <button class="details">▼ DETAILS</button>
+        <div class="description">
+            <table class="t-description">
+                <tr class="t-description">
+                    <td class="t-description">CPU</td>
+                    <td class="t-description">AMD Ryzen 7-7840HS</td>
+                </tr>
+                <tr class="t-description">
+                    <td class="t-description">GPU</td>
+                    <td class="t-description">Nvidia Geforce RTX 4060 8GB</td>
+                </tr>
+                <tr class="t-description">
+                    <td class="t-description">Memory (RAM)</td>
+                    <td class="t-description">16GB</td>
+                </tr class="t-description">
+                <tr class="t-description">
+                    <td class="t-description">STORAGE</td>
+                    <td class="t-description">SSD 512GB
+                    </td>
+                </tr>
+                <tr class="t-description">
+                    <td class="t-description">Display</td>
+                    <td class="t-description">16” WQXGA (2560x1600), 165Hz</td>
+                </tr>
+                <tr class="t-description">
+                    <td class="t-description">OS</td>
+                    <td class="t-description">Windows</td>
+                </tr>
+                <tr class="t-description">
+                    <td class="t-description">Weight</td>
+                    <td class="t-description">2.3 kg</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="redirectory">
+        <div class="row2">
+            <div class="buttons">
+                <form action="form.html" class="redirect">
+                    <button type="submit" class="confirm-form">Fill Form Again</button>
+                </form>
+            </div>
+            <div class="buttons">
+                <form action="index.html" class="redirect">
+                    <button type="submit" class="confirm-form">Return to Home</button>
+                </form>
+            </div>
+            <div class="buttons">
+                <form action="feedback.html" class="redirect">
+                    <button type="submit" class="confirm-form">Feedback <Form></Form></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function onClick() {
+            var x = document.getElementById("Navbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
