@@ -377,6 +377,7 @@ width: 100%;
   color: white;
   text-align: center;
   transition: 0.5s ease-in-out;
+  overflow: auto;
 }
 
 .container:hover {
@@ -429,17 +430,23 @@ a {
   width: 30vw;
 }
 
-table,
-td,
-tr {
+.t-description {
   border-collapse: collapse;
   border: solid #CFCFCE;
 }
 
-table {
+.t-description {
   width: 80%;
   margin-bottom: 5%;
   margin-top: 5%;
+}
+
+.review {
+  border: solid black;
+  color: black;
+  background-color: white;
+  border-radius: 13px;
+  font-size: 13px;
 }
 
 .redirectory {
@@ -537,15 +544,29 @@ input[type=submit],
 
 }
 
-@media screen and (max-width: 400px) {
+/* media query for laptop recommendations */
+@media screen and (max-width: 600px) {
   .container {
     width: 100%;
   }
 
   .laptop {
     width: 200px;
+    overflow: auto;
+  }
+  
+  .t-description {
+    width: 100%;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .review {
+    height: 100px;
+    overflow: auto;
+  }
+}
+/* end here */
 
 @media screen and (max-width: 812px) {
   .row2 {
