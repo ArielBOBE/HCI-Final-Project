@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <link rel="icon" type="image/x-icon" href="/icons/home.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
@@ -29,78 +28,37 @@
     </div>
   </div>
 
-  <form class="container-form" action="laptopRec.html" novalidate>
+  <form class="container-form">
     <!-- Form Starts Here -->
     <div class="selection-div">
       <label class="selection-label" for="deviceType"><b>Select Device Type:</b></label>
-      <select class="selection" id="deviceType" name="deviceType" required onchange="toggleAccordion()">
+      <select class="selection" id="deviceType" name="deviceType" required>
         <option value="" selected disabled>Select a device type</option>
         <option value="laptop">Laptop</option>
         <option value="pc">PC</option>
       </select>
     </div>
 
-    <!-- Accordion for PC FAQs -->
-    <div class="accordion" id="pcAccordion">
-      <div class="selection-div">
-        <label class="selection-label" for="purpose"><b>Purpose :</b></label>
-        <select class="selection" id="purpose" name="purpose" required style="width: 100%;">
-          <option value="" selected disabled>Select a purpose for using the laptop/computer</option>
-          <option value="coding">Development and Programming</option>
-          <option value="productivity">Productivity (Design & Work)</option>
-          <option value="games">Play Video Games</option>
-        </select>
-      </div>
-      <div class="selection-div">
-        <label class="selection-label" for="price"><b>Preferred Price :</b></label>
-        <select class="selection" id="price" name="price" required>
-          <option value="" selected disabled>Select a price range</option>
-          <option value="cheap">IDR 5.000.000,00 - IDR 10.000.000,00</option>
-          <option value="normal">IDR 10.000.000,00 - IDR 20.000.000,00</option>
-          <option value="expensive">IDR 20.000.000,00 - IDR 30.000.000,00</option>
-        </select>
-      </div>
-      <div class="selection-div">
-        <label class="selection-label" for="size"><b>Preferred Storage Size :</b></label>
-        <select class="selection" id="size" name="size">
-          <option value="" selected disabled>Select a storage size</option>
-          <option value="medium">512 GB</option>
-          <option value="large">1 TB</option>
-        </select>
-      </div>
+    <div class="selection-div">
+      <label class="selection-label" for="purpose"><b>Purpose :</b></label>
+      <select class="selection" id="purpose" name="purpose" required style="width: 100%;">
+        <option value="" selected disabled>Select a purpose for using the laptop/computer</option>
+        <option value="coding">Development and Programming</option>
+        <option value="productivity">Productivity (Design & Work)</option>
+        <option value="games">Play Video Games</option>
+      </select>
+    </div>
+    <div class="selection-div">
+      <label class="selection-label" for="price"><b>Preferred Price :</b></label>
+      <select class="selection" id="price" name="price" required>
+        <option value="" selected disabled>Select a price range</option>
+        <option value="cheap">IDR 5.000.000,00 - IDR 10.000.000,00</option>
+        <option value="normal">IDR 10.000.000,00 - IDR 20.000.000,00</option>
+        <option value="expensive">IDR 20.000.000,00 - IDR 30.000.000,00</option>
+      </select>
     </div>
 
-    <!-- Accordion for Laptop FAQs -->
-    <div class="accordion" id="laptopAccordion">
-      <div class="selection-div">
-        <label class="selection-label" for="purpose"><b>Purpose :</b></label>
-        <select class="selection" id="purpose" name="purpose" required>
-          <option value="" selected disabled>Select a purpose for using the laptop/computer</option>
-          <option value="coding">Development and Programming</option>
-          <option value="productivity">Productivity (Design & Work)</option>
-          <option value="games">Play Video Games</option>
-        </select>
-      </div>
-      <div class="selection-div">
-        <label class="selection-label" for="price"><b>Preferred Price :</b></label>
-        <select class="selection" id="price" name="price" required>
-          <option value="" selected disabled>Select a price range</option>
-          <option value="cheap">IDR 5.000.000,00 - IDR 10.000.000,00</option>
-          <option value="normal">IDR 10.000.000,00 - IDR 20.000.000,00</option>
-          <option value="expensive">IDR 20.000.000,00 - IDR 30.000.000,00</option>
-        </select>
-      </div>
-      <div class="selection-div">
-        <label class="selection-label" for="size"><b>Preferred Storage Size :</b></label>
-        <select class="selection" id="size" name="size">
-          <option value="" selected disabled>Select a storage size</option>
-          <option value="medium">512 GB</option>
-          <option value="large">1 TB</option>
-        </select>
-      </div>
-    </div>
-
-    <input type="submit" value="Submit" class="submit">
+    <button type="submit" class="submit" onclick="redirectToPage(event)">submit</button>
   </form>
 
   <script>
@@ -112,13 +70,126 @@
         x.className = "navbar";
       }
     }
-    function toggleAccordion() {
-      var deviceType = document.getElementById("deviceType").value;
-      $(".accordion").hide();
-      $("#" + deviceType + "Accordion").show();
-    }
 
-    toggleAccordion();
+    function redirectToPage() {
+      event.preventDefault();
+      var deviceType = document.getElementById("deviceType").value;
+      var purpose = document.getElementById("purpose").value;
+      var price = document.getElementById("price").value;
+
+      if (deviceType === "laptop") {
+        if (purpose === "coding") {
+          if (price === "cheap") {
+            window.location.href = "";
+          }
+          else if (price === "normal") {
+            window.location.href = "";
+          }
+          else if (price === "expensive") {
+            window.location.href = "";
+          }
+          else {
+            // Handle other cases or redirect to a default page
+            alert("Please choose an option for price");
+          }
+        }
+        else if (purpose === "productivity") {
+          if (price === "cheap") {
+            window.location.href = "";
+          }
+          else if (price === "normal") {
+            window.location.href = "";
+          }
+          else if (price === "expensive") {
+            window.location.href = "";
+          }
+          else {
+            // Handle other cases or redirect to a default page
+            alert("Please choose an option for price");
+          }
+        }
+        else if (purpose === "games") {
+          if (price === "cheap") {
+            window.location.href = "";
+          }
+          else if (price === "normal") {
+            window.location.href = "";
+          }
+          else if (price === "expensive") {
+            window.location.href = "gaming-laptop-expensive.html";
+          }
+          else {
+            // Handle other cases or redirect to a default page
+            alert("Please choose an option for price");
+          }
+        }
+        else {
+            // Handle other cases or redirect to a default page
+            alert("Please choose an option for purpose");
+          }
+      }
+
+      else if (deviceType === "pc") {
+        if (purpose === "coding") {
+          if (price === "cheap") {
+            window.location.href = "";
+          }
+          else if (price === "normal") {
+            window.location.href = "";
+          }
+          else if (price === "expensive") {
+            window.location.href = "";
+          }
+          else {
+            // Handle other cases or redirect to a default page
+            alert("Please choose an option for price");
+          }
+        }
+        else if (purpose === "productivity") {
+          if (price === "cheap") {
+            window.location.href = "";
+          }
+          else if (price === "normal") {
+            window.location.href = "";
+          }
+          else if (price === "expensive") {
+            window.location.href = "";
+          }
+          else {
+            // Handle other cases or redirect to a default page
+            alert("Please choose an option for price");
+          }
+        }
+        else if (purpose === "games") {
+          if (price === "cheap") {
+            window.location.href = "";
+          }
+          else if (price === "normal") {
+            window.location.href = "";
+          }
+          else if (price === "expensive") {
+            window.location.href = "";
+          }
+          else {
+            // Handle other cases or redirect to a default page
+            alert("Please choose an option for price");
+          }
+        }
+        else {
+            // Handle other cases or redirect to a default page
+            alert("Please choose an option for purpose");
+          }
+      }
+
+      else {
+        // Handle other cases or redirect to a default page
+        alert("Please choose an option for device type");
+      }
+
+      console.log("Redirect URL:", window.location.href);
+
+      return false;
+    }
   </script>
 
 </body>
