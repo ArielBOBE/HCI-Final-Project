@@ -336,6 +336,16 @@ header {
 }
 
 .submit {
+  width: 95%;
+  height: 50px;
+  margin: 20px 10px;
+  padding: 10px 0;
+  border-radius: 25px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #4C4844;
+  border: 2px solid #CFCFC3;
+  float: right;
   color: white;
   text-transform: uppercase;
   transition: box-shadow 0.5s ease-in-out;
@@ -345,6 +355,7 @@ header {
   cursor: pointer;
   transition: 0.5s ease-in-out;
   box-shadow: 0px 0px 20px 5px rgb(235, 173, 3);
+  background-color: #4C4844;
 }
 
 .accordion {
