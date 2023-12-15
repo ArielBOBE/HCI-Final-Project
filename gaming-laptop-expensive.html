@@ -24,32 +24,38 @@
 
             // jqeury to hide additional ram info
             $("#ram2").hide();
+            $(".ghost2").hide();
             $(".ram2_text").hide();
             $("#ram1").click(function () {
                 $("#ram2").show();
                 $("#ram1").hide();
+                $(".ghost2").show();
                 $(".ram2_text").show();
                 $(".ram1_text").hide();
             });
             $("#ram2").click(function(){
                 $("#ram1").show();
                 $("#ram2").hide();
+                $(".ghost2").hide();
                 $(".ram2_text").hide();
                 $(".ram1_text").show();
             });
         
             // jquery to hide additional storage info
             $("#storage2").hide();
+            $(".ghost").hide();
             $(".storage2_text").hide();
             $("#storage1").click(function () {
                 $("#storage2").show();
                 $("#storage1").hide();
+                $(".ghost").show();
                 $(".storage2_text").show();
                 $(".storage1_text").hide();
             });
             $("#storage2").click(function(){
                 $("#storage1").show();
                 $("#storage2").hide();
+                $(".ghost").hide();
                 $(".storage2_text").hide();
                 $(".storage1_text").show();
             });
@@ -96,32 +102,34 @@
         <div class="description">
             <table class="t-description">
                 <tr class="t-description">
-                    <td class="t-description">CPU</td>
-                    <td class="t-description">AMD Ryzen 7-7840HS</td>
+                    <td class="t-descriptions">CPU</td>
+                    <td class="t-descriptions">AMD Ryzen 7-7840HS</td>
                 </tr>
                 <tr class="t-description">
-                    <td class="t-description">GPU</td>
-                    <td class="t-description">Nvidia Geforce RTX 4060 8GB</td>
+                    <td class="t-descriptions">GPU</td>
+                    <td class="t-descriptions">Nvidia Geforce RTX 4060 8GB</td>
                 </tr>
                 <tr class="t-description">
-                    <td class="t-description">Memory (RAM)</td>
-                    <td class="t-description"><div class="ram1_text">16GB (Base) </div>  <div class="ram2_text">32GB (+ Rp. 1 Mil to total)<hr>64GB (+ Rp. 2.5 Mil to total price)</div><i class='bx bx-info-circle' id="ram1"></i><i class='bx bxs-info-circle' id="ram2"></i></td>
+                    <td class="t-descriptions">Memory (RAM)</td>
+                    <td class="t-descriptions"><i class='bx bx-info-circle' id="ram1"></i><i class='bx bxs-info-circle' id="ram2"></i><div class="ram1_text">16GB (Base)</div>  
+                        <div class="ram2_text">32GB (+ Rp. 1 Mil to total)</div><div class="ram2_text"><hr></div><i class='bx bx-info-circle ghost2'></i><i class='bx bxs-info-circle ghost2'></i><div class="ram2_text">64GB (+ Rp. 2.5 Mil to total price)</div></td>
                 </tr class="t-description">
                 <tr class="t-description">
-                    <td class="t-description">STORAGE</td>
-                    <td class="t-description"><div class="storage1_text">SSD 512GB (Base)</div> <div class="storage2_text">SSD 1TB (+ Rp. 1 Mil to total)<hr>SSD 2TB (+ Rp. 2 Mil to total)</div><i class='bx bx-info-circle' id="storage1"></i><i class='bx bxs-info-circle' id="storage2"></i></td>
+                    <td class="t-descriptions">STORAGE</td>
+                    <td class="t-descriptions"></div><i class='bx bx-info-circle' id="storage1"></i><i class='bx bxs-info-circle' id="storage2"></i>
+                        <div class="storage1_text">SSD 512GB (Base)</div> <div class="storage2_text">SSD 1TB (+ Rp. 1 Mil to total)</div><div class="storage2_text"><hr></div><i class='bx bxs-info-circle ghost'></i><div class="storage2_text">SSD 2TB (+ Rp. 2 Mil to total)</div></td>
                 </tr>
                 <tr class="t-description">
-                    <td class="t-description">Display</td>
-                    <td class="t-description">16” WQXGA (2560x1600), 165Hz</td>
+                    <td class="t-descriptions">Display</td>
+                    <td class="t-descriptions">16” WQXGA (2560x1600), 165Hz</td>
                 </tr>
                 <tr class="t-description">
-                    <td class="t-description">OS</td>
-                    <td class="t-description">Windows</td>
+                    <td class="t-descriptions">OS</td>
+                    <td class="t-descriptions">Windows</td>
                 </tr>
                 <tr class="t-description">
-                    <td class="t-description">Weight</td>
-                    <td class="t-description">2.3 kg</td>
+                    <td class="t-descriptions">Weight</td>
+                    <td class="t-descriptions">2.3 kg</td>
                 </tr>
             </table>
         </div>
