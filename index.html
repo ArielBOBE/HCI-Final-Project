@@ -4,48 +4,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechSpecs </title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>TechSpecs</title>
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" type="text/css" href="index-stylesheet.css">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="background">
-        <div class="navbar" id="Navbar">
-            <a href="index.html">
-                <img src="assets/logo.png" class="logo">
-            </a>
-            <a class="navbar-text" href="index.html">HOME</a>
-            <a class="navbar-text" href="about.html">ABOUT US</a>
-            <a class="navbar-text" href="feedback.html">FEEDBACK</a>
-            <a href="javascript:void(0);" class="icon" onclick="onClick()">
-                <i class="fa fa-bars"></i>
-            </a>
+    <!-- NAVBAR -->
+    <header>
+        <a href="#"> <img src="assets/logo.png" class="logo"></a>
+
+        <ul class="navbar-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <div class="slide">
+                <span class="welcome-msg-1">Welcome</span>
+                <span class="welcome-msg-2">To</span>
+            </div>
+            <h1>Tech<span class="gradient-text-1">Specs</span></h1>
+            <h3>By Team <span class="gradient-text-2">Error404</span></h3>
+            <p>Your One-Stop Source for Hardware Specifications
+            </p>
+            <div class="button">
+                <a href="form.html" class="btn">Start Now!</a>
+            </div>
         </div>
-    </div>
-    <div class="content">
-        <h1>Welcome to Tech Specs!</h1>
-        <p>Your One-Stop Source for Hardware Specifications</p>
-        <div class="buttons">
-            <form action="form.html" class="redirect">
-                <button type="submit" class="start">START NOW!</button>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="assets/tech-things.png">
+        </div>
+        <div class="about-text">
+            <h2>What is <span>TechSpecs</span>?</h2>
+            <p>TechSpecs is a platform that simplifies the complexity of choosing computer hardware
+                based on your unique needs. Whether you're a power user, student, or seeking budget-friendly solutions,
+                let TechSpecs guide you to the perfect computing experience effortlessly.
+                Say goodbye to information overload - TechSpecs is here to make your tech selection effortless.
+            </p>
+        </div>
+    </section>
+
+    <!-- OUR TEAM SECTION -->
+    <section class="team" id="team">
+        <div class="team-text">
+            <h2>Team <span>Error404</span></h2>
+            <p>We are a diverse group of individuals driven by a shared vision and united by our commitment to
+                excellence.
+                <br>
+                Meet the minds behind the mission, the
+                hearts fueling the dream:
+            </p>
+        </div>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="assets/about-us/ariellong.png" alt="Ariel Prandi Darmawidjaja" class="member-pic">
+                <br><br>
+                <h3>Ariel Prandi - 2702337584</h3>
+                <hr>
+                <p>Computer Science Student in Binus International University</p>
+            </div>
+            <div class="team-member">
+                <img src="assets/about-us/profile_pic.jpg" alt="Ari Jaya Teguh" class="member-pic">
+                <br><br>
+                <h3>Ari Jaya Teguh - 2702403996</h3>
+                <hr>
+                <p>Computer Science Student in Binus International University</p>
+            </div>
+            <div class="team-member">
+                <img src="assets/about-us/pfp.jpg" alt="Orlando Jonathan Padiman" class="member-pic">
+                <br><br>
+                <h3>Orlando Padiman - 2702337615</h3>
+                <hr>
+                <p>Computer Science Student in Binus International University</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT US SECTION -->
+    <section class="contact-us" id="contact-us">
+        <div class="contact-text">
+            <h2><span>Contact</span> Us!</h2>
+            <h3>Facing issues or have suggestions?</h3>
+            <p>
+                Your input is crucial to us! Whether you've faced challenges or have suggestions, share your thoughts.
+                Your feedback drives our improvement, and we appreciate the opportunity to address issues and consider
+                your ideas. Thank you for helping us in enhancing your experience.
+            </p>
+        </div>
+
+        <div class="contact-form">  
+            <form action="">
+                <label for="name">Your Name:</label>
+                <input type="name" id="name" placeholder="Your Name" required>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" placeholder="Your Email Address" required>
+                <label for="msg">Enter Your Message Here: </label>
+                <textarea rows="4" cols="50" placeholder="Type your message here..." id="msg" required></textarea>
+                <input type="submit" class="submit" value="Submit" required>
             </form>
         </div>
-    </div>
+    </section>
 
+    <!-- JS LINK -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- JQUERY CODE -->
+    <!-- CHANGES THE STYLE OF THE NAVBAR ON SCROLL -->
     <script>
-        function onClick() {
-            var x = document.getElementById("Navbar");
-            if (x.className === "navbar") {
-                x.className += " responsive";
-            } else {
-                x.className = "navbar";
-            }
-        }
+        $(function () {
+            $(window).scroll(function () {
+
+                if ($(window).scrollTop() > 200) {
+                    $("header").addClass("sticky")
+                }
+                else {
+                    $("header").removeClass("sticky")
+                }
+            })
+        })
     </script>
 </body>
 
