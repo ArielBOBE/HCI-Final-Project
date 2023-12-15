@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="Jquery.js"></script>
     <script>
@@ -20,7 +21,39 @@
                 $(".description").animate({ height: 'toggle' });
                 $(".details").text(($(".details").text() == "▲ DETAILS") ? "▼ DETAILS" : "▲ DETAILS");
             });
-        });
+
+            // jqeury to hide additional ram info
+            $("#ram2").hide();
+            $(".ram2_text").hide();
+            $("#ram1").click(function () {
+                $("#ram2").show();
+                $("#ram1").hide();
+                $(".ram2_text").show();
+                $(".ram1_text").hide();
+            });
+            $("#ram2").click(function(){
+                $("#ram1").show();
+                $("#ram2").hide();
+                $(".ram2_text").hide();
+                $(".ram1_text").show();
+            });
+        
+            // jquery to hide additional storage info
+            $("#storage2").hide();
+            $(".storage2_text").hide();
+            $("#storage1").click(function () {
+                $("#storage2").show();
+                $("#storage1").hide();
+                $(".storage2_text").show();
+                $(".storage1_text").hide();
+            });
+            $("#storage2").click(function(){
+                $("#storage1").show();
+                $("#storage2").hide();
+                $(".storage2_text").hide();
+                $(".storage1_text").show();
+            });
+        })
     </script>
 </head>
 
@@ -44,7 +77,7 @@
     <div class="container">
         <table>
             <tr>
-                <td class="r-data"><img src="https://p4-ofp.static.pub/fes/cms/2023/05/03/bmu28juvzzj0j2bn5funocd9bwsq92004719.png"
+                <td class="r-data"><img src="assets/results/gaming_expensive.png"
                         class="laptop">
                 </td>
                 <td class="r-data"><figcaption>Review:</figcaption>
@@ -72,12 +105,11 @@
                 </tr>
                 <tr class="t-description">
                     <td class="t-description">Memory (RAM)</td>
-                    <td class="t-description">16GB</td>
+                    <td class="t-description"><div class="ram1_text">16GB (Base) </div>  <div class="ram2_text">32GB (+ Rp. 1 Mil to total)<hr>64GB (+ Rp. 2.5 Mil to total price)</div><i class='bx bx-info-circle' id="ram1"></i><i class='bx bxs-info-circle' id="ram2"></i></td>
                 </tr class="t-description">
                 <tr class="t-description">
                     <td class="t-description">STORAGE</td>
-                    <td class="t-description">SSD 512GB
-                    </td>
+                    <td class="t-description"><div class="storage1_text">SSD 512GB (Base)</div> <div class="storage2_text">SSD 1TB (+ Rp. 1 Mil to total)<hr>SSD 2TB (+ Rp. 2 Mil to total)</div><i class='bx bx-info-circle' id="storage1"></i><i class='bx bxs-info-circle' id="storage2"></i></td>
                 </tr>
                 <tr class="t-description">
                     <td class="t-description">Display</td>
