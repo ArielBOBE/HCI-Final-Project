@@ -444,9 +444,6 @@ a {
 .t-description {
   border-collapse: collapse;
   border: solid #CFCFCE;
-}
-
-.t-description {
   width: 80%;
   margin-bottom: 5%;
   margin-top: 5%;
@@ -580,6 +577,9 @@ input[type=submit],
   .review {
     height: 100px;
     overflow: auto;
+  }
+  .r-data {
+    display: table-row;
   }
 }
 /* end here */
