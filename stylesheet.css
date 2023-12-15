@@ -378,18 +378,6 @@ width: 100%;
 
 
 /* laptop-rec.html */
-.header2 {
-  padding: 5%;
-  text-align: center;
-  color: white;
-  font-size: 25px;
-}
-
-.row {
-  display: inline-flex;
-}
-
-/* laptop-rec.html */
 .container {
   border: solid white;
   margin-top: 5%;
@@ -416,6 +404,11 @@ width: 100%;
 a {
   text-decoration: none;
 }
+
+.bob {
+  padding-left: 16px;
+}
+
 
 .column {
   border: solid #A76322;
