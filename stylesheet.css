@@ -497,6 +497,11 @@ input[type=submit],
     transition: 0.5s ease-in;
   }
 
+  /* for laptop results */
+  .container {
+    width: 90%;
+  }
+
   .navbar.responsive .icon {
     position: absolute;
     right: 0;
