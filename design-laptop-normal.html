@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/icons/home.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="Jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".description").hide()
+            $(".details").click(function () {
+                $(".description").animate({ height: 'toggle' });
+                $(".details").text(($(".details").text() == "▲ DETAILS") ? "▼ DETAILS" : "▲ DETAILS");
+            });
+
+            // jqeury to hide additional ram info
+            $("#ram2").hide();
+            $(".ram2_text").hide();
+            $("#ram1").click(function () {
+                $("#ram2").show();
+                $("#ram1").hide();
+                $(".ram2_text").show();
+                $(".ram1_text").hide();
+            });
+            $("#ram2").click(function(){
+                $("#ram1").show();
+                $("#ram2").hide();
+                $(".ram2_text").hide();
+                $(".ram1_text").show();
+            });
+        
+            // jquery to hide additional storage info
+            $("#storage2").hide();
+            $(".storage2_text").hide();
+            $("#storage1").click(function () {
+                $("#storage2").show();
+                $("#storage1").hide();
+                $(".storage2_text").show();
+                $(".storage1_text").hide();
+            });
+            $("#storage2").click(function(){
+                $("#storage1").show();
+                $("#storage2").hide();
+                $(".storage2_text").hide();
+                $(".storage1_text").show();
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="background">
+        <div class="navbar" id="Navbar">
+            <a href="index.html">
+                <img src="assets/logo.png" class="logo">
+            </a>
+            <a class="navbar-text" href="index.html">HOME</a>
+            <a class="navbar-text" href="about.html">ABOUT US</a>
+            <a class="navbar-text" href="feedback.html">FEEDBACK</a>
+            <a href="javascript:void(0);" class="icon" onclick="onClick()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    <!-- recommendation starts here -->
+    <!-- Instead of hiding the parent div hide the child div so that when it appears
+    it'll look like the parent div extends !! -->
+    <div class="container">
+        <table>
+            <tr>
+                <td class="r-data"><img src="assets/results/design_normal.png"
+                        class="laptop">
+                </td>
+                <td class="r-data"><figcaption>Review:</figcaption>
+                    <p class="review">Equipped with capable Intel processors and integrated Intel Iris Xe graphics, the Zenbook 14 OLED (UX3402) handles design software and tasks with commendable efficiency. <br><br>
+                        While not aimed at heavy-duty design work, it performs admirably for graphic design, photo editing, and moderate creative tasks. <br> <br>
+                        Weighing just a few pounds and with a compact form factor, the Zenbook 14 OLED (UX3402) is highly portable, catering to users needing a laptop on the go. <br><br>
+                        Battery life is respectable, offering decent uptime for daily usage, though heavy usage might require more frequent charging.
+                        </p>
+                </td>
+            </tr>
+        </table>
+        <!-- <div class="description"> -->
+        <figcaption>Zenbook 14 OLED (UX3402): ≈ Rp. 16.000.000</figcaption>
+        <button class="details">▼ DETAILS</button>
+        <div class="description">
+            <table class="t-description">
+                <tr class="t-description">
+                    <td class="t-descriptions">CPU</td>
+                    <td class="t-descriptions">Intel Core i5-1240P</td>
+                </tr>
+                <tr class="t-description">
+                    <td class="t-descriptions">GPU</td>
+                    <td class="t-descriptions">Intel Iris Xe Graphics, 4GB</td>
+                </tr>
+                <tr class="t-description">
+                    <td class="t-descriptions">Memory (RAM)</td>
+                    <td class="t-descriptions"><i class='bx bx-info-circle' id="ram1"></i><i class='bx bxs-info-circle' id="ram2"></i>
+                        <div class="ram1_text bob">16GB (Base)</div>
+                        <div class="ram2_text bob">32GB (+ Rp. 1 Mil to total)</div>
+                        <div class="ram2_text"><hr></div><div class="ram2_text">64GB (+ Rp. 2.5 Mil to total price)</div></td>
+                </tr class="t-description">
+                <tr class="t-description">
+                    <td class="t-descriptions">STORAGE</td>
+                    <td class="t-descriptions"><i class='bx bx-info-circle' id="storage1"></i><i class='bx bxs-info-circle' id="storage2"></i>
+                        <div class="storage1_text bob">SSD 512GB (Base)</div>
+                        <div class="storage2_text bob">SSD 1TB (+ Rp. 1 Mil to total)</div><div class="storage2_text"><hr></div>
+                        <div class="storage2_text">SSD 2TB (+ Rp. 2 Mil to total)</div></td>
+                </tr>
+                <tr class="t-description">
+                    <td class="t-descriptions">Display</td>
+                    <td class="t-descriptions">14" 2.8K (2880 x 1800), 90Hz</td>
+                </tr>
+                <tr class="t-description">
+                    <td class="t-descriptions">OS</td>
+                    <td class="t-descriptions">Windows</td>
+                </tr>
+                <tr class="t-description">
+                    <td class="t-descriptions">Weight</td>
+                    <td class="t-descriptions">1.4 kg</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="redirectory">
+        <div class="row2">
+            <div class="buttons">
+                <form action="form.html" class="redirect">
+                    <button type="submit" class="confirm-form">Fill Form Again</button>
+                </form>
+            </div>
+            <div class="buttons">
+                <form action="index.html" class="redirect">
+                    <button type="submit" class="confirm-form">Return to Home</button>
+                </form>
+            </div>
+            <div class="buttons">
+                <form action="feedback.html" class="redirect">
+                    <button type="submit" class="confirm-form">Feedback <Form></Form></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function onClick() {
+            var x = document.getElementById("Navbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
