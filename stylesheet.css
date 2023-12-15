@@ -432,6 +432,18 @@ a {
   margin-bottom: 1%;
 }
 
+.ghost, .ghost2 {
+  visibility: hidden;
+}
+
+.bx-info-circle, .bxs-info-circle {
+  float: right;
+}
+
+.bx-info-circle, .bxs-info-circle {
+  float: right;
+}
+
 .details:hover {
   background-color: #CFCFCE;
   color: #4C4844;
