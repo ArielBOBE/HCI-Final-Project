@@ -378,16 +378,27 @@ width: 100%;
 
 
 /* laptop-rec.html */
+.header2 {
+  padding: 5%;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+.row {
+  display: inline-flex;
+}
+
+/* laptop-rec.html */
 .container {
   border: solid white;
   margin-top: 5%;
   width: 50%;
   border-radius: 30px;
   background-color: #4C4844;
-  padding-top: 5%;
+  padding-top: 0%;
   color: white;
   text-align: center;
-  transition: 0.5s ease-in-out;
   overflow: auto;
 }
 
@@ -432,18 +443,6 @@ a {
   margin-bottom: 1%;
 }
 
-.ghost, .ghost2 {
-  visibility: hidden;
-}
-
-.bx-info-circle, .bxs-info-circle {
-  float: right;
-}
-
-.bx-info-circle, .bxs-info-circle {
-  float: right;
-}
-
 .details:hover {
   background-color: #CFCFCE;
   color: #4C4844;
@@ -456,7 +455,23 @@ a {
 .t-description {
   border-collapse: collapse;
   border: solid #CFCFCE;
-  width: 80%;
+}
+
+.t-descriptions {
+  border-collapse: collapse;
+  border: solid #CFCFCE;
+}
+
+.ghost, .ghost2 {
+  visibility: hidden;
+}
+
+.bx-info-circle, .bxs-info-circle {
+  float: right;
+}
+
+.t-description {
+  width: 90%;
   margin-bottom: 5%;
   margin-top: 5%;
 }
@@ -467,6 +482,10 @@ a {
   background-color: white;
   border-radius: 13px;
   font-size: 13px;
+}
+
+.bx-info-circle {
+  color: white;
 }
 
 .redirectory {
