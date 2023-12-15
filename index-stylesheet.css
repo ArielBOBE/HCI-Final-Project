@@ -1,0 +1,421 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+/* CSS Variables for Consistent Design */
+:root {
+  /* Primary Color and Accents */
+  --main-color-accent-1: rgba(72, 72, 68, 1);
+  --main-color-accent-2: rgb(34, 34, 34);
+  --main-color-accent-3: rgb(37, 37, 37);
+  --main-color-accent-transparent: rgba(72, 72, 68, 0.6);
+  /* Second Color */
+  --second-accent: rgba(212, 113, 0);
+  /* Gradient Color for Text */
+  --gradient-text-1: linear-gradient(270deg, rgba(115, 109, 205, 1) 0%, rgba(212, 113, 0, 1) 1%, rgba(212, 113, 0, 1) 0%, rgba(115, 109, 205, 1) 50%, rgba(212, 113, 0, 1) 50%, rgba(212, 113, 0, 1) 100%);
+  --gradient-text-2: linear-gradient(270deg, rgba(212, 113, 0, 1) 0%, rgba(115, 109, 205, 1) 1%, rgba(115, 109, 205, 1) 0%, rgba(212, 113, 0, 1) 50%, rgba(115, 109, 205, 1) 50%, rgba(115, 109, 205, 1) 100%);
+  /* Color for Text */
+  --main-text-color: rgb(255, 255, 255);
+  --second-text-color: rgba(226, 226, 226, 0.89);
+  /* Font Sizes - Uses rem  */
+  --large-font: 5.5rem;
+  --big-font: 3rem;
+  --medium-font: 2.5rem;
+  --small-font: 2rem;
+  --p-font-size: 1.1rem;
+}
+
+body {
+  background: var(--main-color-accent-1);
+  color: var(--main-text-color);
+}
+
+span {
+  color: var(--second-accent)
+}
+
+.gradient-text-1 {
+  background-color: rgba(198, 86, 75, 1);
+  background: var(--gradient-text-1);
+  background-size: 205%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s ease-out;
+}
+
+.gradient-text-1:hover {
+  background-position: -98%;
+}
+
+.gradient-text-2 {
+  background-color: rgba(198, 86, 75, 1);
+  background: var(--gradient-text-2);
+  background-size: 205%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s ease-out;
+}
+
+.gradient-text-2:hover {
+  background-position: -98%;
+}
+
+
+/* NAVBAR */
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 12px 5%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  transition: all 0.25s ease-in-out
+}
+
+header.sticky {
+  position: sticky;
+  background-color: var(--main-color-accent-3);
+  border-bottom: 3px solid var(--bg-transparent);
+  padding: 10px 5%;
+}
+
+header.sticky:hover {
+  border-bottom: 3px solid var(--second-accent);
+  box-shadow: 0px 2px 20px 5px var(--second-accent);
+}
+
+.logo {
+  height: 7.5vh;
+  width: auto;
+  cursor: pointer;
+  transition: 0.25s ease-in-out
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+.navbar-list {
+  display: flex;
+}
+
+.navbar-list a {
+  color: var(--second-text-color);
+  font-size: var(--p-font-size);
+  z-index: 1000;
+  font-weight: 500;
+  margin: 0 15px;
+  transition: all 0.3s ease-in-out
+}
+
+.navbar-list a:hover {
+  color: var(--second-accent);
+}
+
+#menu-icon {
+  color: var(--main-text-color);
+  font-size: 28px;
+  cursor: pointer;
+  margin-left: 25px;
+  display: none;
+  z-index: 10001;
+}
+
+/* SECTIONS */
+section {
+  padding: 120px 5% 100px;
+  top: 0%;
+}
+
+/* HOME PAGE */
+
+.home {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(assets/homepage.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.slide {
+  margin-bottom: 5px;
+}
+
+.welcome-msg-1 {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 7px;
+  font-size: var(--medium-font);
+  line-height: var(--medium-font);
+  font-weight: 500;
+  border-radius: 5px;
+  background: var(--second-accent);
+  color: var(--main-text-color)
+}
+
+.welcome-msg-2 {
+  display: inline-block;
+  color: var(--main-text-color);
+  font-size: var(--medium-font);
+  font-weight: 500;
+}
+
+.home-text h1 {
+  font-size: var(--large-font);
+  font-weight: 700;
+  color: var(--main-text-color);
+}
+
+.home-text h3 {
+  color: var(--main-text-color);
+  font-size: var(--big-font);
+}
+
+.home-text p {
+  color: var(--main-text-color);
+  margin: 0 0 10px;
+  font-size: var(--p-font-size);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-flex;
+  color: var(--main-text-color);
+  padding: 10px 20px;
+  background: var(--bg-transparent);
+  border: 2px solid var(--main-color-accent-3);
+  background-size: 205%;
+  border-radius: 5px;
+  transition: 0.25s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(0.9);
+}
+
+/* ABOUT US */
+.about {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--main-color-accent-3);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about-img img {
+  max-width: 800px;
+  height: auto;
+  width: 100%;
+}
+
+.about-text h2 {
+  font-size: var(--big-font);
+  font-weight: 700;
+  color: var(--main-text-color);
+  line-height: 1;
+}
+
+.about-text p {
+  font-size: var(--p-font-size);
+  font-weight: 400;
+  line-height: 2;
+  color: var(--main-text-color);
+}
+
+/* TEAM */
+
+.team {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--main-color-accent-2);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  align-items: center;
+}
+
+.team-text {
+  text-align: center;
+  margin: 40px;
+}
+
+.team-text p {
+  font-size: var(--p-font-size);
+  padding: 20px;
+  line-height: 2;
+}
+
+.team-text h2 {
+  font-size: var(--big-font);
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1rem;
+}
+
+.team-member {
+  margin: 10px;
+  text-align: center;
+  background: var(--main-color-accent-3);
+  font-size: var(--p-font-size);
+  padding: 30px 40px 30px 50px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease-in-out;
+  max-width: 435px;
+  max-height: 435px;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.member-pic {
+  border-radius: 50%;
+  width: 55%;
+  max-width: 55%;
+  height: auto;
+  max-height: 55%;
+}
+
+/* CONTACT US */
+.contact-us {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--main-color-accent-3);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-text h2 {
+  font-size: var(--big-font);
+  line-height: 1;
+}
+
+.contact-text h3 {
+  margin: 10px 0;
+  font-size: var(--small-font);
+  font-weight: 500;
+}
+
+.contact-text p {
+  font-size: var(--p-font-size);
+  line-height: 1.5;
+  max-width: 70%;
+}
+
+.contact-form form {
+  position: relative;
+}
+
+form label {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 5px 0;
+}
+
+.contact-form form input,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 5px 0;
+  background-color: var(--bg-transparent);
+  color: var(--main-text-color);
+  border: 3px solid var(--main-color-accent-2);
+  outline: none;
+  font-size: var(--p-font-size);
+  border-radius: 10px;
+  font-size: (var(--p-font-size));
+  resize: none;
+}
+
+.contact-form .submit {
+  max-width: 20%;
+  display: inline-block;
+  background-color: var(--second-accent);
+  font-size: var(--p-font-size);
+  color: var(--main-text-color);
+  transition: 0.25s ease-in-out;
+}
+
+.contact-form .submit:hover {
+  transform: scale(1.05);
+}
+
+.contact-form .submit:active {
+  transform: scale(0.9);
+}
+
+/* Media Queries */
+@media (max-width: 1480px) {
+  header {
+    padding: 12px 2.5%;
+    transition: 0.2s;
+  }
+
+  header.sticky {
+    padding: 12px 2.5%;
+    transition: 0.2s;
+  }
+
+  section {
+    padding: 120px 3% 70px;
+  }
+
+  .end {
+    padding: 20px 5%;
+  }
+
+}
+
+@media (max-width: 1100px) {
+
+  :root {
+    --large-font: 4rem;
+    --big-font: 2.5rem;
+    --medium-font: 2rem;
+    --small-font: 1.5rem;
+    --p-font-size: 1rem;
+  }
+
+  section {
+    padding: 120px 4% 70px;
+  }
+
+  .home-text h3 {
+    font-size: var(--big-font);
+  }
+}
