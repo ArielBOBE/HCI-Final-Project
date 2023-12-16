@@ -139,6 +139,14 @@
                     $("header").removeClass("sticky")
                 }
             })
+
+            $("#menu-icon").click(function() {
+                $('.navbar-list').toggleClass("open");
+            })
+
+            $(window).scroll(function() {
+                $('.navbar-list').removeClass("open");
+            })
         })
     </script>
 </body>
