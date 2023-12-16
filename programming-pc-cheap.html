@@ -4,132 +4,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="/icons/home.png">
+    <title>TechSpecs</title>
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="Jquery.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(".hide-price").hide();
-            $(".price").hide();
-            $(".show-price").click(function () {
-                $(".price").show();
-                $(".show-price").hide();
-                $(".hide-price").show();
-            });
-            $(".hide-price").click(function(){
-                $(".show-price").show();
-                $(".hide-price").hide();
-                $(".price").hide();
-            });
-        });
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="background">
-        <div class="navbar" id="Navbar">
-            <a href="index.html">
-                <img src="assets/logo.png" class="logo">
-            </a>
-            <a class="navbar-text" href="index.html">HOME</a>
-            <a class="navbar-text" href="about.html">ABOUT US</a>
-            <a class="navbar-text" href="feedback.html">FEEDBACK</a>
-            <a href="javascript:void(0);" class="icon" onclick="onClick()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-    </div>
-    <!-- recommendation starts here -->
-    <div class="container">
-        <!-- <div class="description"> -->
-        <h2>Total Price: ≈ Rp. 9.800.000</h2>
-        <div class="description">
-            <table class="t-description">
-                <tr class="t-description">
-                    <th class="t-descriptions"><h3>Component</h3></th>
-                    <th class="t-descriptions"><h3>Model</h3></th>
-                    <th class="t-descriptions price"><h3>Price</h3></th>
-                </tr>
-                <tr class="t-description">
-                    <td class="t-descriptions">CPU</td>
-                    <td class="t-descriptions td-content">Intel Core i3 12100H</td>
-                    <td class="t-descriptions td-content price">+ Rp. 1.700.000</td>
-                </tr>
-                <tr class="t-description">
-                    <td class="t-descriptions">GPU</td>
-                    <td class="t-descriptions td-content">Nvidia GeForce RTX 1650, 4GB</td>
-                    <td class="t-descriptions td-content price">+ Rp. 2.000.000</td>
-                </tr>
-                <tr class="t-description">
-                    <td class="t-descriptions">Memory (RAM)</td>
-                    <td class="t-descriptions">
-                        <div class="ram1_text td-content">32GB - Kingston DDR4 HyperX</div>
-                    <td class="t-descriptions td-content price">+ Rp. 1.500.000</td>
-                </tr class="t-description">
-                <tr class="t-description">
-                    <td class="t-descriptions">Storage</td>
-                    <td class="t-descriptions">
-                        <div class="storage1_text bob td-content">SSD 512TB - Samsung Evo NVMe</div>
-                    <td class="t-descriptions td-content price">+ Rp. 800.000</td>    
-                </tr>
-                <tr class="t-description">
-                    <td class="t-descriptions">Motherboard</td>
-                    <td class="t-descriptions td-content"> GigaByte B660M </td>
-                    <td class="t-descriptions td-content price">+ Rp. 2.300.000</td>
-                </tr>
-                <tr class="t-description">
-                    <td class="t-descriptions">PSU Wattage</td>
-                    <td class="t-descriptions td-content">700W - Corsair power supply</td>
-                    <td class="t-descriptions td-content price">+ Rp. 600.000</td>
-                </tr>
-                <tr class="t-description">
-                    <td class="t-descriptions">Case Size</td>
-                    <td class="t-descriptions td-content">E80X</td>
-                    <td class="t-descriptions td-content price">+ Rp. 900.000</td>
-                </tr>
-            </table>
-        </div>
-        <button class="show-price">「Show Price Details」</button><button class="hide-price">「Hide Price Details」</button>
-    </div>
+    <header>
+        <a href="index.html#"> <img src="assets/logo.png" class="logo"></a>
 
-    <div class="redirectory">
-        <div class="row2">
-            <div class="buttons">
-                <form action="form.html" class="redirect">
-                    <button type="submit" class="confirm-form">Fill Form Again</button>
-                </form>
+        <ul class="navbar-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#about#team">Our Team</a></li>
+            <li><a href="index.html#about#contact-us">Contact Us</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+    <section class="result-section">
+        <div class="container">
+            <h2>Total Price: ≈ Rp. 9.800.000</h2>
+            <div class="description">
+                <table class="t-description">
+                    <tr class="t-description">
+                        <th class="t-descriptions">
+                            <h3>Component</h3>
+                        </th>
+                        <th class="t-descriptions">
+                            <h3>Model</h3>
+                        </th>
+                        <th class="t-descriptions price">
+                            <h3>Price</h3>
+                        </th>
+                    </tr>
+                    <tr class="t-description">
+                        <td class="t-descriptions">CPU</td>
+                        <td class="t-descriptions td-content">Intel Core i3 12100H</td>
+                        <td class="t-descriptions td-content price">+ Rp. 1.700.000</td>
+                    </tr>
+                    <tr class="t-description">
+                        <td class="t-descriptions">GPU</td>
+                        <td class="t-descriptions td-content">Nvidia GeForce RTX 1650, 4GB</td>
+                        <td class="t-descriptions td-content price">+ Rp. 2.000.000</td>
+                    </tr>
+                    <tr class="t-description">
+                        <td class="t-descriptions">Memory (RAM)</td>
+                        <td class="t-descriptions">
+                            <div class="ram1_text td-content">32GB - Kingston DDR4 HyperX</div>
+                        <td class="t-descriptions td-content price">+ Rp. 1.500.000</td>
+                    </tr class="t-description">
+                    <tr class="t-description">
+                        <td class="t-descriptions">Storage</td>
+                        <td class="t-descriptions">
+                            <div class="storage1_text bob td-content">SSD 512TB - Samsung Evo NVMe</div>
+                        <td class="t-descriptions td-content price">+ Rp. 800.000</td>
+                    </tr>
+                    <tr class="t-description">
+                        <td class="t-descriptions">Motherboard</td>
+                        <td class="t-descriptions td-content"> GigaByte B660M </td>
+                        <td class="t-descriptions td-content price">+ Rp. 2.300.000</td>
+                    </tr>
+                    <tr class="t-description">
+                        <td class="t-descriptions">PSU Wattage</td>
+                        <td class="t-descriptions td-content">700W - Corsair power supply</td>
+                        <td class="t-descriptions td-content price">+ Rp. 600.000</td>
+                    </tr>
+                    <tr class="t-description">
+                        <td class="t-descriptions">Case Size</td>
+                        <td class="t-descriptions td-content">E80X</td>
+                        <td class="t-descriptions td-content price">+ Rp. 900.000</td>
+                    </tr>
+                </table>
             </div>
-            <div class="buttons">
-                <form action="index.html" class="redirect">
-                    <button type="submit" class="confirm-form">Return to Home</button>
-                </form>
-            </div>
-            <div class="buttons">
-                <form action="feedback.html" class="redirect">
-                    <button type="submit" class="confirm-form">Feedback <Form></Form></button>
-                </form>
+            <button class="show-price">「Show Price Details」</button><button class="hide-price">「Hide Price
+                Details」</button>
+        </div>
+
+        <div class="redirectory">
+            <div class="row2">
+                <div class="buttons">
+                    <form action="form.html" class="redirect">
+                        <button type="submit" class="confirm-form">Fill Form Again</button>
+                    </form>
+                </div>
+                <div class="buttons">
+                    <form action="index.html" class="redirect">
+                        <button type="submit" class="confirm-form">Return to Home</button>
+                    </form>
+                </div>
+                <div class="buttons">
+                    <form action="feedback.html" class="redirect">
+                        <button type="submit" class="confirm-form">Feedback <Form></Form></button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- JS LINK -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+    <!-- JQUERY CODE -->
     <script>
-        function onClick() {
-            var x = document.getElementById("Navbar");
-            if (x.className === "navbar") {
-                x.className += " responsive";
-            } else {
-                x.className = "navbar";
-            }
-        }
-    </script>
+        // Changes the style of navbar on scroll
+        $(window).scroll(function () {
 
+            if ($(window).scrollTop() > 200) {
+                $("header").addClass("sticky")
+            }
+            else {
+                $("header").removeClass("sticky")
+            }
+        })
+        // Toggles show/hide navbar on click of the burger menu
+        $("#menu-icon").click(function () {
+            $('.navbar-list').toggleClass("open");
+        })
+        // Hides navbar on scroll
+        $(window).scroll(function () {
+            $('.navbar-list').removeClass("open");
+        });
+
+        $(document).ready(function () {
+            // Hides table of specs and toggles "Details" button
+            $(".description").hide()
+            $(".details").click(function () {
+                $(".description").animate({ height: 'toggle' });
+                $(".details").text(($(".details").text() == "▲ DETAILS") ? "▼ DETAILS" : "▲ DETAILS");
+            });
+
+            // Hides additional info on RAM
+            $("#ram2").hide();
+            $(".ram2_text").hide();
+            $("#ram1").click(function () {
+                $("#ram2").show();
+                $("#ram1").hide();
+                $(".ram2_text").show();
+                $(".ram1_text").hide();
+            });
+            $("#ram2").click(function () {
+                $("#ram1").show();
+                $("#ram2").hide();
+                $(".ram2_text").hide();
+                $(".ram1_text").show();
+            });
+
+            // Hides additional info on storage
+            $("#storage2").hide();
+            $(".storage2_text").hide();
+            $("#storage1").click(function () {
+                $("#storage2").show();
+                $("#storage1").hide();
+                $(".storage2_text").show();
+                $(".storage1_text").hide();
+            });
+            $("#storage2").click(function () {
+                $("#storage1").show();
+                $("#storage2").hide();
+                $(".storage2_text").hide();
+                $(".storage1_text").show();
+            });
+        })
+    </script>
 </body>
 
 </html>
