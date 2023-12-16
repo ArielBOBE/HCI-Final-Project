@@ -14,22 +14,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="Jquery.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(".hide-price").hide();
-            $(".price").hide();
-            $(".show-price").click(function () {
-                $(".price").show();
-                $(".show-price").hide();
-                $(".hide-price").show();
-            });
-            $(".hide-price").click(function(){
-                $(".show-price").show();
-                $(".hide-price").hide();
-                $(".price").hide();
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -53,9 +37,15 @@
         <div class="description">
             <table class="t-description">
                 <tr class="t-description">
-                    <th class="t-descriptions"><h3>Component</h3></th>
-                    <th class="t-descriptions"><h3>Model</h3></th>
-                    <th class="t-descriptions price"><h3>Price</h3></th>
+                    <th class="t-descriptions">
+                        <h3>Component</h3>
+                    </th>
+                    <th class="t-descriptions">
+                        <h3>Model</h3>
+                    </th>
+                    <th class="t-descriptions price">
+                        <h3>Price</h3>
+                    </th>
                 </tr>
                 <tr class="t-description">
                     <td class="t-descriptions">CPU</td>
@@ -77,7 +67,7 @@
                     <td class="t-descriptions">Storage</td>
                     <td class="t-descriptions">
                         <div class="storage1_text bob td-content">SSD 512TB - Samsung Evo NVMe</div>
-                    <td class="t-descriptions td-content price">+ Rp. 800.000</td>    
+                    <td class="t-descriptions td-content price">+ Rp. 800.000</td>
                 </tr>
                 <tr class="t-description">
                     <td class="t-descriptions">Motherboard</td>
@@ -128,6 +118,20 @@
                 x.className = "navbar";
             }
         }
+        $(document).ready(function () {
+            $(".hide-price").hide();
+            $(".price").hide();
+            $(".show-price").click(function () {
+                $(".price").show();
+                $(".show-price").hide();
+                $(".hide-price").show();
+            });
+            $(".hide-price").click(function () {
+                $(".show-price").show();
+                $(".hide-price").hide();
+                $(".price").hide();
+            });
+        });
     </script>
 
 </body>
