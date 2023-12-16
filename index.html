@@ -143,7 +143,7 @@
             </p>
         </div>
 
-        <div class="contact-form">  
+        <div class="contact-form">
             <form action="">
                 <label for="name">Your Name:</label>
                 <input type="name" id="name" placeholder="Your Name" required>
@@ -158,12 +158,11 @@
 
     <!-- JS LINK -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
+    
     <!-- JQUERY CODE -->
-    <!-- CHANGES THE STYLE OF THE NAVBAR ON SCROLL -->
     <script>
         $(function () {
+            // Changes the style of navbar on scroll
             $(window).scroll(function () {
 
                 if ($(window).scrollTop() > 200) {
@@ -173,12 +172,12 @@
                     $("header").removeClass("sticky")
                 }
             })
-
-            $("#menu-icon").click(function() {
+            // Toggles show/hide navbar on click of the burger menu
+            $("#menu-icon").click(function () {
                 $('.navbar-list').toggleClass("open");
             })
-
-            $(window).scroll(function() {
+            // Hides navbar on scroll
+            $(window).scroll(function () {
                 $('.navbar-list').removeClass("open");
             })
         })
@@ -225,7 +224,7 @@
             showSlides();
 
             // Event listener for dot click
-            $('.dot').on('click', function() {
+            $('.dot').on('click', function () {
                 // Update slide index based on the clicked dot
                 slideIndex = $(this).data('index');
                 // Call showSlides to display the selected slide
