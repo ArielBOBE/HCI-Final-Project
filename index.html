@@ -184,31 +184,51 @@
         })
 
         $(document).ready(function () {
+            // Initialize slide index
             var slideIndex = 0;
 
+            // Function to show slides
             function showSlides() {
+                // Select slides and dots
                 var slides = $('.mySlides');
                 var dots = $('.dot');
 
+                // Hide all slides and remove active class from dots
                 slides.hide();
                 dots.removeClass('active');
 
+                // Increment slide index
                 slideIndex++;
 
+                // Reset slide index if it exceeds the number of slides
                 if (slideIndex > slides.length) {
                     slideIndex = 1;
                 }
 
+                // Show the current slide and mark the corresponding dot as active
                 $(slides[slideIndex - 1]).show();
                 $(dots[slideIndex - 1]).addClass('active');
 
-                setTimeout(showSlides, 2000); // Change slide every 2 seconds (adjust as needed)
-                }
+                // Adjust dot container position
+                var dotContainer = $('.dot-container');
+                var containerWidth = $('.slideshow-container').width();
+                var dotContainerWidth = dotContainer.width();
 
+                // Calculate the left position to center the dot container
+                dotContainer.css('left', (containerWidth - dotContainerWidth) / 2);
+
+                // Set a timeout to call the showSlides function again after 2000 milliseconds (2 seconds)
+                setTimeout(showSlides, 2000); // Change slide every 2 seconds (adjust as needed)
+            }
+
+            // Initial call to showSlides function
             showSlides();
 
+            // Event listener for dot click
             $('.dot').on('click', function() {
+                // Update slide index based on the clicked dot
                 slideIndex = $(this).data('index');
+                // Call showSlides to display the selected slide
                 showSlides();
             });
         });
