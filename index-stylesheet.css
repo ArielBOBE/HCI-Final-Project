@@ -606,4 +606,24 @@ form textarea {
   .about p {
     max-width: 90vw;
   }
+
+  .contact-us {
+    height: fit-content;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 365px) {
+  :root {
+    --large-font: 3rem;
+    --big-font: 2rem;
+    --medium-font: 2rem;
+    --small-font: 1.2rem;
+    --p-font-size: 1rem;
+    transition: 0.2s;
+  }
+
+  .team {
+    padding: 11px;
+  }
 }
