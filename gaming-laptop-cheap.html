@@ -14,47 +14,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="Jquery.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".description").hide()
-            $(".details").click(function () {
-                $(".description").animate({ height: 'toggle' });
-                $(".details").text(($(".details").text() == "▲ DETAILS") ? "▼ DETAILS" : "▲ DETAILS");
-            });
-
-            // jqeury to hide additional ram info
-            $("#ram2").hide();
-            $(".ram2_text").hide();
-            $("#ram1").click(function () {
-                $("#ram2").show();
-                $("#ram1").hide();
-                $(".ram2_text").show();
-                $(".ram1_text").hide();
-            });
-            $("#ram2").click(function(){
-                $("#ram1").show();
-                $("#ram2").hide();
-                $(".ram2_text").hide();
-                $(".ram1_text").show();
-            });
-        
-            // jquery to hide additional storage info
-            $("#storage2").hide();
-            $(".storage2_text").hide();
-            $("#storage1").click(function () {
-                $("#storage2").show();
-                $("#storage1").hide();
-                $(".storage2_text").show();
-                $(".storage1_text").hide();
-            });
-            $("#storage2").click(function(){
-                $("#storage1").show();
-                $("#storage2").hide();
-                $(".storage2_text").hide();
-                $(".storage1_text").show();
-            });
-        })
-    </script>
 </head>
 
 <body>
@@ -77,14 +36,15 @@
     <div class="container">
         <table>
             <tr>
-                <td class="r-data"><img src="assets/results/gaming_cheap.png"
-                        class="laptop">
+                <td class="r-data"><img src="assets/results/gaming_cheap.png" class="laptop">
                 </td>
-                <td class="r-data"><figcaption>Review:</figcaption>
-                    <p class="review">While not targeted at serious gaming enthusiasts, 
-                        the Pavilion 15 comes with a decent AMD Radeon graphics card, 
+                <td class="r-data">
+                    <figcaption>Review:</figcaption>
+                    <p class="review">While not targeted at serious gaming enthusiasts,
+                        the Pavilion 15 comes with a decent AMD Radeon graphics card,
                         paired with capable processors. <br> <br>
-                        This setup enables it to handle popular esports titles and moderately demanding games at lower to medium settings. <br> <br>
+                        This setup enables it to handle popular esports titles and moderately demanding games at lower
+                        to medium settings. <br> <br>
                         The option for high refresh rate displays enhances the gaming experience, ensuring smooth
                         visuals.</p>
                 </td>
@@ -96,8 +56,12 @@
         <div class="description">
             <table class="t-description">
                 <tr class="t-description">
-                    <th class="t-descriptions"><h3>Component</h3></th>
-                    <th class="t-descriptions"><h3>Model</h3></th>
+                    <th class="t-descriptions">
+                        <h3>Component</h3>
+                    </th>
+                    <th class="t-descriptions">
+                        <h3>Model</h3>
+                    </th>
                 </tr>
                 <tr class="t-description">
                     <td class="t-descriptions">CPU</td>
@@ -109,20 +73,31 @@
                 </tr>
                 <tr class="t-description">
                     <td class="t-descriptions">Memory (RAM)</td>
-                    <td class="t-descriptions"><i class='bx bx-info-circle' id="ram1"></i><i class='bx bxs-info-circle' id="ram2"></i>
+                    <td class="t-descriptions"><i class='bx bx-info-circle' id="ram1"></i><i class='bx bxs-info-circle'
+                            id="ram2"></i>
                         <div class="ram1_text bob">8GB (Base)</div>
                         <div class="ram2_text bob">16GB (+ Rp. 500k to total)</div>
-                        <div class="ram2_text"><hr></div>
+                        <div class="ram2_text">
+                            <hr>
+                        </div>
                         <div class="ram2_text">32GB (+ Rp. 1.5 Mil to total price)</div>
-                        <div class="ram2_text"><hr></div>
-                        <div class="ram2_text">64GB (+ Rp. 3 Mil to total price)</div></td>
+                        <div class="ram2_text">
+                            <hr>
+                        </div>
+                        <div class="ram2_text">64GB (+ Rp. 3 Mil to total price)</div>
+                    </td>
                 </tr class="t-description">
                 <tr class="t-description">
                     <td class="t-descriptions">STORAGE</td>
-                    <td class="t-descriptions"><i class='bx bx-info-circle' id="storage1"></i><i class='bx bxs-info-circle' id="storage2"></i>
+                    <td class="t-descriptions"><i class='bx bx-info-circle' id="storage1"></i><i
+                            class='bx bxs-info-circle' id="storage2"></i>
                         <div class="storage1_text bob">SSD 512GB (Base)</div>
-                        <div class="storage2_text bob">SSD 1TB (+ Rp. 1 Mil to total)</div><div class="storage2_text"><hr></div>
-                        <div class="storage2_text">SSD 2TB (+ Rp. 2 Mil to total)</div></td>
+                        <div class="storage2_text bob">SSD 1TB (+ Rp. 1 Mil to total)</div>
+                        <div class="storage2_text">
+                            <hr>
+                        </div>
+                        <div class="storage2_text">SSD 2TB (+ Rp. 2 Mil to total)</div>
+                    </td>
                 </tr>
                 <tr class="t-description">
                     <td class="t-descriptions">Display</td>
@@ -169,6 +144,49 @@
                 x.className = "navbar";
             }
         }
+    </script>
+
+    
+    <script>
+        $(document).ready(function () { 
+            $(".description").hide()
+            $(".details").click(function () {
+                $(".description").animate({ height: 'toggle' });
+                $(".details").text(($(".details").text() == "▲ DETAILS") ? "▼ DETAILS" : "▲ DETAILS");
+            });
+
+            // jqeury to hide additional ram info
+            $("#ram2").hide();
+            $(".ram2_text").hide();
+            $("#ram1").click(function () {
+                $("#ram2").show();
+                $("#ram1").hide();
+                $(".ram2_text").show();
+                $(".ram1_text").hide();
+            });
+            $("#ram2").click(function () {
+                $("#ram1").show();
+                $("#ram2").hide();
+                $(".ram2_text").hide();
+                $(".ram1_text").show();
+            });
+
+            // jquery to hide additional storage info
+            $("#storage2").hide();
+            $(".storage2_text").hide();
+            $("#storage1").click(function () {
+                $("#storage2").show();
+                $("#storage1").hide();
+                $(".storage2_text").show();
+                $(".storage1_text").hide();
+            });
+            $("#storage2").click(function () {
+                $("#storage1").show();
+                $("#storage2").hide();
+                $(".storage2_text").hide();
+                $(".storage1_text").show();
+            });
+        })
     </script>
 
 </body>
