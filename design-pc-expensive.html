@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="/icons/home.png">
+    <title>TechSpecs</title>
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="Jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -109,16 +109,32 @@
         </div>
     </div>
 
+    <!-- JS LINK -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- JQUERY CODE -->
     <script>
-        function onClick() {
-            var x = document.getElementById("Navbar");
-            if (x.className === "navbar") {
-                x.className += " responsive";
-            } else {
-                x.className = "navbar";
-            }
-        }
-        $(document).ready(function () {
+        $(function () {
+            // Changes the style of navbar on scroll
+            $(window).scroll(function () {
+
+                if ($(window).scrollTop() > 200) {
+                    $("header").addClass("sticky")
+                }
+                else {
+                    $("header").removeClass("sticky")
+                }
+            })
+            // Toggles show/hide navbar on click of the burger menu
+            $("#menu-icon").click(function () {
+                $('.navbar-list').toggleClass("open");
+            })
+            // Hides navbar on scroll
+            $(window).scroll(function () {
+                $('.navbar-list').removeClass("open");
+            });
+
+            // Toggle hide/show for price of parts
             $(".hide-price").hide();
             $(".price").hide();
             $(".show-price").click(function () {
@@ -131,7 +147,7 @@
                 $(".hide-price").hide();
                 $(".price").hide();
             });
-        });
+        })
     </script>
 
 </body>
