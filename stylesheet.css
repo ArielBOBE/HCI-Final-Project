@@ -380,11 +380,11 @@ width: 100%;
   margin-top: 5%;
   width: 50%;
   border-radius: 30px;
-  background-color: #4C4844;
   padding-top: 0%;
   color: white;
   text-align: center;
   overflow: auto;
+  background-color: #252525;
 }
 
 .container:hover {
@@ -450,6 +450,7 @@ a {
 .t-descriptions {
   border-collapse: collapse;
   border: solid #CFCFCE;
+  background-color: #48484499;
 }
 
 .ghost, .ghost2 {
@@ -481,6 +482,10 @@ a {
 .redirectory {
   text-align: center;
   margin-top: 5%;
+}
+
+.td-content {
+  color: #e2e2e2e3
 }
 
 @media screen and (max-width: 970px) {
