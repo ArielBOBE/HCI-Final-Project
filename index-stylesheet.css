@@ -33,7 +33,7 @@
 }
 
 body {
-  background: var(--main-color-accent-1);
+  background-color: var(--main-color-accent-1);
   color: var(--main-text-color);
 }
 
@@ -164,7 +164,7 @@ section {
   line-height: var(--medium-font);
   font-weight: 500;
   border-radius: 5px;
-  background: var(--second-accent);
+  background-color: var(--second-accent);
   color: var(--main-text-color)
 }
 
@@ -202,7 +202,7 @@ section {
   display: inline-flex;
   color: var(--main-text-color);
   padding: 10px 20px;
-  background: var(--main-color-accent-transparent);
+  background-color: var(--main-color-accent-transparent);
   border: 2px solid var(--main-color-accent-3);
   background-size: 205%;
   border-radius: 5px;
@@ -229,8 +229,10 @@ section {
 
 .about-img img {
   max-width: 800px;
+  min-width: 500px;
   height: auto;
   width: 100%;
+  padding: 30px;
 }
 
 .about-text h2 {
@@ -253,10 +255,8 @@ section {
   height: 100vh;
   width: 100%;
   background-color: var(--main-color-accent-2);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .team-text {
@@ -274,19 +274,23 @@ section {
   font-size: var(--big-font);
 }
 
+.team-text h3 {
+  font-size: var(--medium-font);
+  font-weight: 600;
+}
+
 .team-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   align-items: center;
-  gap: 1.5rem;
-  margin: 1rem;
+  gap: 2.5rem;
+  margin: 5rem 0 0 0;
 }
 
 .team-member {
   margin: 10px;
   text-align: center;
-  background: var(--main-color-accent-3);
-  font-size: var(--p-font-size);
+  background-color: var(--main-color-accent-3);
   padding: 30px 40px 30px 50px;
   border-radius: 10px;
   align-items: center;
@@ -294,6 +298,17 @@ section {
   transition: all 0.25s ease-in-out;
   max-width: 435px;
   max-height: 435px;
+}
+
+.team-member p {
+  font-size: var(--p-font-size);
+  font-weight: 300;
+  color: var(--second-text-color);
+}
+
+.team-member h3 {
+  font-size: var(--p-font-size);
+  font-weight: 400;
 }
 
 .team-member:hover {
@@ -402,13 +417,13 @@ form textarea {
 }
 
 @media (max-width: 1100px) {
-
   :root {
     --large-font: 4rem;
     --big-font: 2.5rem;
     --medium-font: 2rem;
-    --small-font: 1.5rem;
+    --small-font: 1.2rem;
     --p-font-size: 1rem;
+    transition: 0.2s;
   }
 
   section {
@@ -418,4 +433,92 @@ form textarea {
   .home-text h3 {
     font-size: var(--big-font);
   }
+}
+
+@media (max-width: 920px) {
+  .about {
+    grid-template-columns: 1fr;
+    height: fit-content;
+    max-height: 105vh;
+
+  }
+
+  .about-img {
+    text-align: center;
+    width: 100%;
+  }
+
+  .about-img img {
+    width: auto;
+    height: auto;
+    max-width: 80%;
+  }
+
+  .contact-us {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-us label {
+    display: none;
+  }
+}
+
+@media (max-width: 905px) {
+  .team {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--main-color-accent-2);
+    align-items: center;
+  }
+
+  .team-member {
+    width: 100%;
+    height: auto;
+  }
+
+  .team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    margin: 0 0 0 0;
+  }
+}
+
+@media (max-width: 830px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar-list {
+    position: absolute;
+    top: -1000px;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color-accent-3);
+    text-align: left;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .navbar-list a {
+    display: block;
+    margin: 20px;
+    font-size: var(--small-font);
+  }
+
+  .navbar-list a:hover {
+    color: var(--second-accent)
+  }
+
+  .navbar-list a:active {
+    color: var(--main-text-color)
+  }
+
+  .navbar-list.open {
+    top: 100%;
+  }
+
 }
