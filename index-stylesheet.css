@@ -134,7 +134,7 @@ header.sticky:hover {
 
 /* SECTIONS */
 section {
-  padding: 120px 5% 100px;
+  padding: 100px 5% 100px;
   top: 0%;
 }
 
@@ -409,7 +409,8 @@ form textarea {
   }
 
   section {
-    padding: 120px 3% 70px;
+    padding: 100px 3% 70px;
+    min-height: 100vh;
   }
 
   .end {
@@ -451,7 +452,7 @@ form textarea {
   .about {
     grid-template-columns: 1fr;
     height: fit-content;
-    max-height: 105vh;
+    min-height: 105vh;
   }
 
   .about-text {
@@ -465,13 +466,20 @@ form textarea {
   .about-img {
     text-align: center;
     width: 100%;
-    order: 2;
   }
 
   .about-img img {
     width: auto;
     height: auto;
     max-width: 80%;
+  }
+
+  .team-member h3 {
+    font-size: 0.8rem;
+  }
+
+  .team-member p {
+    font-size: 0.7rem;
   }
 
   .contact-us {
@@ -508,16 +516,9 @@ form textarea {
 @media (max-width: 905px) {
   .team {
     height: fit-content;
-    display: flex;
-    flex-direction: column;
     width: 100%;
     background-color: var(--main-color-accent-2);
-    align-items: center;
-  }
-
-  .team-member {
-    min-width: 100%;
-    height: auto;
+    padding: 50px;
   }
 
   .team-member h3 {
@@ -530,8 +531,9 @@ form textarea {
 
 
   .team-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 0 0 0 0;
   }
