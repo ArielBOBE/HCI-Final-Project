@@ -240,6 +240,7 @@ section {
   font-weight: 700;
   color: var(--main-text-color);
   line-height: 1;
+  margin: 20px 0 20px;
 }
 
 .about-text p {
@@ -436,17 +437,35 @@ form textarea {
   }
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1005px) {
+  .team-member h3 {
+    font-size: 0.9rem;
+  }
+
+  .team-member p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 935px) {
   .about {
     grid-template-columns: 1fr;
     height: fit-content;
     max-height: 105vh;
+  }
 
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .about-img {
     text-align: center;
     width: 100%;
+    order: 2;
   }
 
   .about-img img {
@@ -462,6 +481,28 @@ form textarea {
   .contact-us label {
     display: none;
   }
+
+  .contact-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-form .submit {
+    max-width: 40%;
+    background-color: var(--second-accent);
+    font-size: var(--p-font-size);
+    color: var(--main-text-color);
+    transition: 0.25s ease-in-out;
+  }
+
+  .contact-form {
+    align-items: center;
+    text-align: center;
+  }
+
 }
 
 @media (max-width: 905px) {
@@ -479,13 +520,22 @@ form textarea {
     height: auto;
   }
 
+  .team-member h3 {
+    font-size: var(--small-font);
+  }
+
+  .team-member p {
+    font-size: var(--p-font-size)
+  }
+
+
   .team-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     align-items: center;
     margin: 0 0 0 0;
   }
-  
+
 }
 
 @media (max-width: 830px) {
@@ -529,27 +579,6 @@ form textarea {
     text-align: center;
   }
 
-  .contact-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .contact-form .submit {
-    max-width: 40%;
-    background-color: var(--second-accent);
-    font-size: var(--p-font-size);
-    color: var(--main-text-color);
-    transition: 0.25s ease-in-out;
-  }
-
-  .contact-form {
-    align-items: center;
-    text-align: center;
-  }
-
 }
 
 @media (max-width: 830px) {
@@ -557,7 +586,7 @@ form textarea {
     max-width: 90%;
   }
 
-  .about p  {
+  .about p {
     max-width: 90vw;
   }
 }
@@ -568,11 +597,11 @@ form textarea {
     height: auto;
   }
 
-  .about h2  {
+  .about h2 {
     max-width: 90vw;
   }
 
-  .about p  {
+  .about p {
     max-width: 90vw;
   }
 }
