@@ -32,18 +32,50 @@
 
     <!-- HOME SECTION -->
     <section class="home" id="home">
-        <div class="home-text">
-            <div class="slide">
-                <span class="welcome-msg-1">Welcome</span>
-                <span class="welcome-msg-2">To</span>
+        <div class="content-container">
+            <div class="home-text">
+                <div class="slide">
+                    <span class="welcome-msg-1">Welcome</span>
+                    <span class="welcome-msg-2">To</span>
+                </div>
+                <h1>Tech<span class="gradient-text-1">Specs</span></h1>
+                <h3>By Team <span class="gradient-text-2">Error404</span></h3>
+                <p>Your One-Stop Source for Hardware Specifications
+                </p>
+                <div class="button">
+                    <a href="form.html" class="btn">Start Now!</a>
+                </div>
             </div>
-            <h1>Tech<span class="gradient-text-1">Specs</span></h1>
-            <h3>By Team <span class="gradient-text-2">Error404</span></h3>
-            <p>Your One-Stop Source for Hardware Specifications
-            </p>
-            <div class="button">
-                <a href="form.html" class="btn">Start Now!</a>
-            </div>
+        </div>
+        <div class="slideshow-container">
+            <center>
+                <!-- Slides -->
+                <div class="mySlides">
+                    <img src="assets/slideshow/flex.png">
+                </div>
+                <div class="mySlides">
+                    <img src="assets/slideshow/gaming.png">
+                </div>
+                <div class="mySlides">
+                    <img src="assets/slideshow/gpu.png">
+                </div>
+                <div class="mySlides">
+                    <img src="assets/slideshow/pc_case.png">
+                </div>
+                <div class="mySlides">
+                    <img src="assets/slideshow/laptop.png">
+                </div>
+            </center>
+            <!-- Navigation dots -->
+            <center>
+                <div class="dot-container">
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                    <span class="dot" data-index="4"></span>
+                    <span class="dot" data-index="5"></span>
+                </div>
+            </center>
         </div>
     </section>
 
@@ -126,6 +158,7 @@
 
     <!-- JS LINK -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <!-- JQUERY CODE -->
     <!-- CHANGES THE STYLE OF THE NAVBAR ON SCROLL -->
@@ -149,6 +182,36 @@
                 $('.navbar-list').removeClass("open");
             })
         })
+
+        $(document).ready(function () {
+            var slideIndex = 0;
+
+            function showSlides() {
+                var slides = $('.mySlides');
+                var dots = $('.dot');
+
+                slides.hide();
+                dots.removeClass('active');
+
+                slideIndex++;
+
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+
+                $(slides[slideIndex - 1]).show();
+                $(dots[slideIndex - 1]).addClass('active');
+
+                setTimeout(showSlides, 2000); // Change slide every 2 seconds (adjust as needed)
+                }
+
+            showSlides();
+
+            $('.dot').on('click', function() {
+                slideIndex = $(this).data('index');
+                showSlides();
+            });
+        });
     </script>
 </body>
 
