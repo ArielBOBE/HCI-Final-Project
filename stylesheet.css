@@ -150,15 +150,22 @@ body {
 }
 
 .confirm-form {
-  color: white;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
+  color: rgb(255, 255, 255);
+  background-color: rgba(212, 113, 0);
+  width: 250px;
+  height: auto;
+  margin: 20px 10px;
+  padding: 10px 0;
+  text-align: center;
+  float: right;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  transition: 0.25s ease-in-out;
 }
 
 .confirm-form:hover {
-  transition: 0.5s ease-in-out;
-  box-shadow: 0px 0px 20px 5px rgb(235, 173, 3);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .feedback-form {
@@ -215,8 +222,7 @@ label {
   display: inline-block;
 }
 
-input[type=submit],
-.confirm-form {
+input[type=submit] {
   width: 250px;
   height: 50px;
   margin: 20px 10px;
@@ -337,8 +343,7 @@ header {
 .submit {
   background-color: rgba(212, 113, 0);
   color: rgb(255, 255, 255);
-  font-size: 1.1rem;
-  text-transform: uppercase;
+  font-size: 0.9rem;
   text-align: center;
   width: 20%;
   height: 50px;
@@ -352,7 +357,7 @@ header {
 
 .submit:hover {
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .accordion {
@@ -385,12 +390,6 @@ width: 100%;
   text-align: center;
   overflow: auto;
   background-color: #252525;
-}
-
-.container:hover {
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-  box-shadow: 0px 0px 20px 5px whitesmoke;
 }
 
 .row2 {
@@ -436,6 +435,7 @@ a {
 .details:hover {
   background-color: #CFCFCE;
   color: #4C4844;
+  cursor: pointer;
 }
 
 .laptop {
@@ -477,6 +477,10 @@ a {
 
 .bx-info-circle {
   color: white;
+}
+
+.bx-info-circle:hover, .bxs-info-circle {
+  cursor: pointer;
 }
 
 .redirectory {
