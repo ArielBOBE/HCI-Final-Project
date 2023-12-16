@@ -427,7 +427,7 @@ form textarea {
   }
 
   section {
-    padding: 120px 4% 70px;
+    padding: 70px 4% 70px;
   }
 
   .home-text h3 {
@@ -474,7 +474,7 @@ form textarea {
   }
 
   .team-member {
-    width: 100%;
+    min-width: 100%;
     height: auto;
   }
 
@@ -521,4 +521,56 @@ form textarea {
     top: 100%;
   }
 
+  .home {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-form .submit {
+    max-width: 40%;
+    background-color: var(--second-accent);
+    font-size: var(--p-font-size);
+    color: var(--main-text-color);
+    transition: 0.25s ease-in-out;
+  }
+
+  .contact-form {
+    align-items: center;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 830px) {
+  .about img {
+    max-width: 90%;
+  }
+
+  .about p  {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 525px) {
+  .about-img img {
+    min-width: 100%;
+    height: auto;
+  }
+
+  .about h2  {
+    max-width: 90vw;
+  }
+
+  .about p  {
+    max-width: 90vw;
+  }
 }
