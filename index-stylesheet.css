@@ -388,6 +388,7 @@ form textarea {
 
 .contact-form .submit:hover {
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 .contact-form .submit:active {
