@@ -35,10 +35,11 @@
 body {
     background-color: var(--main-color-accent-1);
     color: var(--main-text-color);
-  }
+}
+
 span {
     color: var(--second-accent)
-  }
+}
 
 /* SECTIONS */
 section {
@@ -120,31 +121,15 @@ header.sticky:hover {
     z-index: 10001;
 }
 
-.form-navbar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    margin: 0px;
-    padding: 10px 5%;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--main-color-accent-3);
-    border-bottom: 3px solid var(--bg-transparent);
-    transition: all 0.25s ease-in-out
-}
-
-.form-navbar:hover {
-    border-bottom: 3px solid var(--second-accent);
-    box-shadow: 0px 2px 20px 5px var(--second-accent);
-}
-
 /* FORM PAGE */
 .container-form {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    min-width: 50%;
+    min-width: 60%;
+    max-width: 70%;
+    height: fit-content;
+    max-height: 70rem;
     background-color: var(--main-color-accent-3);
     border: 2px solid var(--main-color-accent-transparent);
     border-radius: 10px;
@@ -155,6 +140,7 @@ header.sticky:hover {
 }
 
 .form-text {
+    display: flex;
     text-align: center;
     flex-direction: column;
     font-size: ();
@@ -167,25 +153,13 @@ header.sticky:hover {
     align-items: center;
 }
 
-.confirm-form label {
-    flex: 1;
-    margin-right: 15px;
-    text-align: right;
-    font-weight: 300;
-}
-
 .container-form select {
+    display: flex;
     flex: 2;
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
     transition: 0.5s ease-in-out;
-}
-
-.container-form select {
-    flex: 2;
-    width: 100%;
-    padding: 8px;
     background-color: var(--main-color-accent-transparent);
     color: var(--main-text-color);
     border: 3px solid var(--main-color-accent-2);
@@ -202,6 +176,7 @@ header.sticky:hover {
     background-color: var(--second-accent);
     color: var(--main-text-color);
     border: 0;
+    border-radius: 10px;
     text-transform: uppercase;
     transition: 0.25s ease-in-out;
     cursor: pointer;
@@ -219,12 +194,366 @@ header.sticky:hover {
 .selection-div {
     display: flex;
     width: 100%;
+    height: auto;
 }
 
 .selection-label {
-    width: 30%
+    width: 30%;
+    height: auto;
 }
 
-.selection {
-    width: 70%
+/* LAPTOP RESULTS PAGE */
+.result-section {
+    height: fit-content;
+    padding: 0;
+    min-height: 100vh;
+    padding: 100px 0% 0% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    width: 50rem;
+    height: fit-content;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--main-color-accent-3);
+    border: 2px solid var(--main-color-accent-transparent);
+    border-radius: 10px;
+}
+
+
+
+.row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px 0 20px;
+    width: 100rem;
+}
+
+.container img{
+    width: 100%;
+}
+
+.r-data {
+    width: 50%;
+}
+
+.bob {
+    padding-left: 16px;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+
+.details {
+    background-color: var(--second-accent);
+    color: var(--main-text-color);
+    padding: 5px;
+    margin: 0 0 10px 0;
+    cursor: pointer;
+    border-radius: 1px;
+    border: 0;
+    width: fit-content;
+    height: fit-content;
+    transition: 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+
+.details:hover {
+    transform: scale(1.1);
+}
+
+.confirm-form {
+    color: var(--main-text-color);
+    background-color: var(--second-accent);
+    font-size: var(--p-font-size);
+    border: 0;
+    border-radius: 10px;
+    width: fit-content;
+    max-width: 10rem;
+    margin: 20px;
+    height: auto;
+    padding: 10px 10px;
+    text-align: center;
+    float: right;
+    font-size: 0.9rem;
+    transition: 0.25s ease-in-out;
+    text-transform: uppercase;
+    transition: 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+.confirm-form:hover {
+    transform: scale(1.05);
+}
+
+.laptop {
+    width: 30vw;
+}
+
+.t-description {
+    border-collapse: collapse;
+    border: solid #CFCFCE;
+}
+
+.t-descriptions {
+    border-collapse: collapse;
+    border: solid #CFCFCE;
+    background-color: #48484499;
+}
+
+.ghost,
+.ghost2 {
+    visibility: hidden;
+}
+
+.bx-info-circle,
+.bxs-info-circle {
+    float: right;
+}
+
+.t-description {
+    width: 90%;
+    margin-bottom: 2.5%;
+    margin-top: 2.5%;
+}
+
+.review {
+    border: solid black;
+    color: black;
+    background-color: white;
+    border-radius: 13px;
+    font-size: 13px;
+}
+
+.bx-info-circle {
+    color: white;
+}
+
+.bx-info-circle:hover,
+.bxs-info-circle {
+    cursor: pointer;
+}
+
+.redirectory {
+    text-align: center;
+}
+
+.show-price:hover,
+.hide-price:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+.show-price,
+.hide-price {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    margin-bottom: 1%;
+}
+
+.column {
+    border: solid #A76322;
+    color: white;
+    background-color: #4C4844;
+    width: 100%;
+    margin-left: 5%;
+    padding: 3%;
+    border-radius: 50px;
+}
+
+.column:hover {
+    color: #4C4844;
+    background-color: #CFCFCE;
+}
+
+.column3 {
+    margin-right: 5%;
+}
+
+.laptop {
+    width: 30vw;
+}
+
+.t-description {
+    border-collapse: collapse;
+    border: solid #CFCFCE;
+}
+
+.t-descriptions {
+    border-collapse: collapse;
+    border: solid #CFCFCE;
+    background-color: #48484499;
+}
+
+.ghost,
+.ghost2 {
+    visibility: hidden;
+}
+
+.bx-info-circle,
+.bxs-info-circle {
+    float: right;
+}
+
+.t-description {
+    width: 90%;
+    margin-bottom: 2.5%;
+    margin-top: 2.5%;
+}
+
+.review {
+    border: solid black;
+    color: black;
+    background-color: white;
+    border-radius: 13px;
+    font-size: 13px;
+}
+
+.bx-info-circle {
+    color: white;
+}
+
+.bx-info-circle:hover,
+.bxs-info-circle {
+    cursor: pointer;
+}
+
+.redirectory {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.show-price:hover,
+.hide-price:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+.show-price,
+.hide-price {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    margin-bottom: 1%;
+}
+
+/* MEDIA QUERIES */
+
+/* RESPONSIVE NAVBAR */
+@media screen and (max-width: 830px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar-list {
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--main-color-accent-3);
+        text-align: left;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .navbar-list a {
+        display: block;
+        margin: 20px;
+        font-size: var(--small-font);
+    }
+
+    .navbar-list a:hover {
+        color: var(--second-accent)
+    }
+
+    .navbar-list a:active {
+        color: var(--main-text-color)
+    }
+
+    .navbar-list.open {
+        top: 100%;
+    }
+}
+
+/* RESPONSIVE FORM PAGE */
+@media screen and (max-width: 990px) {
+    .container-form {
+        min-width: 65%;
+        max-width: 100%;
+        text-align: center;
+        height: fit-content;
+    }
+
+    .selection-label {
+        width: 100%;
+        margin: 5px 0 5px 0;
+        padding: 10px;
+        display: none;
+    }
+
+    .selection {
+        text-align: center;
+    }
+
+}
+
+/* LAPTOP RECOMMENDATIONS */
+@media screen and (max-width: 970px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .container {
+        width: 80%;
+    }
+
+    .laptop {
+        width: 200px;
+        overflow: auto;
+    }
+
+    .t-description {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .review {
+        width: 100%;
+        max-height: 200px;
+        overflow: scroll;
+    }
+
+    .r-data {
+        display: table-row;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .row2 {
+        width: 100%;
+    }
 }
