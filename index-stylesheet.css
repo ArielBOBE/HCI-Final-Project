@@ -46,6 +46,7 @@ span {
   background: var(--gradient-text-1);
   background-size: 205%;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.5s ease-out;
 }
@@ -59,6 +60,7 @@ span {
   background: var(--gradient-text-2);
   background-size: 205%;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.5s ease-out;
 }
@@ -223,7 +225,7 @@ section {
   position: relative;
   max-width: 600px;
   overflow: hidden;
-  padding-right: 100px;
+  margin: 0px 20px 0 px 20px ;
   width: 100%;
 }
 
@@ -616,14 +618,12 @@ form textarea {
   }
 
   .home {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
+    justify-content: left;
+    flex-direction: row;
   }
 
   .slideshow-container {
-    padding-left: 100px;
+    padding-left: 20px;
   }
 
   .mySlides img {
