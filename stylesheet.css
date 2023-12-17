@@ -74,8 +74,7 @@ header {
 header.sticky {
   position: sticky;
   background-color: var(--main-color-accent-3);
-  border-bottom: 3px solid var(--bg-transparent);
-  margin: 0px;
+  border-bottom: 3px solid var(--main-color-accent-transparent);
   padding: 10px 5%;
 }
 
@@ -233,7 +232,7 @@ header.sticky:hover {
   align-items: center;
   text-align: center;
   padding: 20px 20px 0 20px;
-  width: 100rem;
+  max-width: 100%
 }
 
 .container img{
