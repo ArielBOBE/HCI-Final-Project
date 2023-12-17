@@ -139,7 +139,7 @@ section {
   padding: 100px 5% 100px;
   top: 0%;
   min-height: 100vh;
-  height:fit-content
+  height: fit-content
 }
 
 /* HOME PAGE */
@@ -225,7 +225,7 @@ section {
   position: relative;
   max-width: 600px;
   overflow: hidden;
-  margin: 0px 20px 0 px 20px ;
+  margin: 0px 20px 0 px 20px;
   width: 100%;
 }
 
@@ -435,9 +435,9 @@ form textarea {
 }
 
 /* Media Queries */
-@media (max-width: 1480px) {
+@media screen and (max-width: 1480px) {
   header {
-    padding: 12px 2.5%;
+    padding: 12px 5%;
     transition: 0.2s;
   }
 
@@ -457,7 +457,7 @@ form textarea {
 
 }
 
-@media (max-width: 1100px) {
+@media screen and (max-width: 1100px) {
   :root {
     --large-font: 4rem;
     --big-font: 2.5rem;
@@ -480,7 +480,7 @@ form textarea {
   }
 }
 
-@media (max-width: 1005px) {
+@media screen and (max-width: 1005px) {
   .team-member h3 {
     font-size: 0.9rem;
   }
@@ -490,7 +490,7 @@ form textarea {
   }
 }
 
-@media (max-width: 935px) {
+@media screen and (max-width: 935px) {
   .about {
     grid-template-columns: 1fr;
     height: fit-content;
@@ -555,7 +555,7 @@ form textarea {
 
 }
 
-@media (max-width: 905px) {
+@media screen and (max-width: 905px) {
   .team {
     height: fit-content;
     width: 100%;
@@ -582,7 +582,7 @@ form textarea {
 
 }
 
-@media (max-width: 830px) {
+@media screen and (max-width: 830px) {
   #menu-icon {
     display: block;
   }
@@ -617,11 +617,6 @@ form textarea {
     top: 100%;
   }
 
-  .home {
-    justify-content: left;
-    flex-direction: row;
-  }
-
   .slideshow-container {
     padding-left: 20px;
   }
@@ -631,7 +626,7 @@ form textarea {
   }
 }
 
-@media (max-width: 830px) {
+@media screen and (max-width: 830px) {
   .about img {
     max-width: 90%;
   }
@@ -641,7 +636,19 @@ form textarea {
   }
 }
 
-@media (max-width: 525px) {
+@media screen and (max-width: 720px) {
+  .home {
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+  }
+
+  .slideshow-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 525px) {
   .about-img img {
     min-width: 100%;
     height: auto;
@@ -669,14 +676,8 @@ form textarea {
   }
 }
 
-@media (max-width: 445px) {
-  .slideshow-container {
-    padding: 0;
-  }
 
-}
-
-@media (max-width: 365px) {
+@media screen and (max-width: 435px) {
   :root {
     --large-font: 3rem;
     --big-font: 2rem;
@@ -689,4 +690,14 @@ form textarea {
   .team {
     padding: 11px;
   }
+}
+
+@media screen and (max-width: 335px) {
+  :root {
+    --large-font: 2.75rem;
+    --big-font: 1.75rem;
+    --medium-font: 1.5rem;
+    --p-font-size: 1rem
+  }
+
 }
