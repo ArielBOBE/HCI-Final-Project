@@ -216,6 +216,10 @@ header.sticky:hover {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 50rem;
   height: fit-content;
   padding: 20px;
@@ -233,10 +237,10 @@ header.sticky:hover {
   align-items: center;
   text-align: center;
   padding: 20px 20px 0 20px;
-  width: 100rem;
+  width: 100%;
 }
 
-.container img{
+.container img {
   width: 100%;
 }
 
@@ -254,7 +258,9 @@ header.sticky:hover {
   width: 90%;
 }
 
-.details {
+.details,
+.show-price,
+.hide-price {
   background-color: var(--second-accent);
   color: var(--main-text-color);
   padding: 5px;
@@ -269,7 +275,9 @@ header.sticky:hover {
 }
 
 
-.details:hover {
+.details:hover,
+.show-price:hover,
+.hide-price:hover {
   transform: scale(1.1);
 }
 
@@ -345,28 +353,6 @@ header.sticky:hover {
   cursor: pointer;
 }
 
-.redirectory {
-  text-align: center;
-}
-
-.show-price:hover,
-.hide-price:hover {
-  color: grey;
-  cursor: pointer;
-}
-
-.show-price,
-.hide-price {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-  margin-bottom: 1%;
-}
-
 .column {
   border: solid #A76322;
   color: white;
@@ -391,6 +377,9 @@ header.sticky:hover {
 }
 
 .t-description {
+  width: 90%;
+  margin-bottom: 2.5%;
+  margin-top: 2.5%;
   border-collapse: collapse;
   border: solid #CFCFCE;
 }
@@ -406,17 +395,6 @@ header.sticky:hover {
   visibility: hidden;
 }
 
-.bx-info-circle,
-.bxs-info-circle {
-  float: right;
-}
-
-.t-description {
-  width: 90%;
-  margin-bottom: 2.5%;
-  margin-top: 2.5%;
-}
-
 .review {
   border: solid black;
   color: black;
@@ -425,8 +403,10 @@ header.sticky:hover {
   font-size: 13px;
 }
 
-.bx-info-circle {
+.bx-info-circle,
+.bxs-info-circle {
   color: white;
+  float: right;
 }
 
 .bx-info-circle:hover,
@@ -439,81 +419,63 @@ header.sticky:hover {
   margin-top: 5%;
 }
 
-.show-price:hover,
-.hide-price:hover {
-  color: grey;
-  cursor: pointer;
-}
-
-.show-price,
-.hide-price {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-  margin-bottom: 1%;
-}
-
 /* MEDIA QUERIES */
 
 /* RESPONSIVE NAVBAR */
 @media screen and (max-width: 830px) {
   #menu-icon {
-      display: block;
+    display: block;
   }
 
   .navbar-list {
-      position: absolute;
-      top: -1000px;
-      right: 0;
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      background-color: var(--main-color-accent-3);
-      text-align: left;
-      transition: all 0.25s ease-in-out;
+    position: absolute;
+    top: -1000px;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color-accent-3);
+    text-align: left;
+    transition: all 0.25s ease-in-out;
   }
 
   .navbar-list a {
-      display: block;
-      margin: 20px;
-      font-size: var(--small-font);
+    display: block;
+    margin: 20px;
+    font-size: var(--small-font);
   }
 
   .navbar-list a:hover {
-      color: var(--second-accent)
+    color: var(--second-accent)
   }
 
   .navbar-list a:active {
-      color: var(--main-text-color)
+    color: var(--main-text-color)
   }
 
   .navbar-list.open {
-      top: 100%;
+    top: 100%;
   }
 }
 
 /* RESPONSIVE FORM PAGE */
 @media screen and (max-width: 990px) {
   .container-form {
-      min-width: 65%;
-      max-width: 100%;
-      text-align: center;
-      height: fit-content;
+    min-width: 65%;
+    max-width: 100%;
+    text-align: center;
+    height: fit-content;
   }
 
   .selection-label {
-      width: 100%;
-      margin: 5px 0 5px 0;
-      padding: 10px;
-      display: none;
+    width: 100%;
+    margin: 5px 0 5px 0;
+    padding: 10px;
+    display: none;
   }
 
   .selection {
-      text-align: center;
+    text-align: center;
   }
 
 }
@@ -521,39 +483,50 @@ header.sticky:hover {
 /* LAPTOP RECOMMENDATIONS */
 @media screen and (max-width: 970px) {
   .container {
-      width: 80%;
+    width: 80%;
   }
 }
 
 @media screen and (max-width: 840px) {
   .container {
-      width: 80%;
+    width: 80%;
   }
 
   .laptop {
-      width: 200px;
-      overflow: auto;
+    width: 200px;
+    overflow: auto;
   }
 
   .t-description {
-      width: 100%;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 700px) {
   .review {
-      width: 100%;
-      max-height: 200px;
-      overflow: scroll;
+    width: 100%;
+    max-height: 200px;
+    overflow: scroll;
   }
 
   .r-data {
-      display: table-row;
+    display: table-row;
   }
 }
 
 @media screen and (max-width: 812px) {
   .row2 {
-      width: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .row2 {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .confirm-form {
+    width: 140px;
   }
 }
