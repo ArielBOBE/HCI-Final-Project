@@ -112,63 +112,38 @@
 
     <!-- JQUERY CODE -->
     <script>
-        // Changes the style of navbar on scroll
-        $(window).scroll(function () {
+        $(function () {
+            // Changes the style of navbar on scroll
+            $(window).scroll(function () {
 
-            if ($(window).scrollTop() > 100) {
-                $("header").addClass("sticky")
-            }
-            else {
-                $("header").removeClass("sticky")
-            }
-        })
-        // Toggles show/hide navbar on click of the burger menu
-        $("#menu-icon").click(function () {
-            $('.navbar-list').toggleClass("open");
-        })
-        // Hides navbar on scroll
-        $(window).scroll(function () {
-            $('.navbar-list').removeClass("open");
-        });
-
-        $(document).ready(function () {
-            // Hides table of specs and toggles "Details" button
-            $(".description").hide()
-            $(".details").click(function () {
-                $(".description").animate({ height: 'toggle' });
-                $(".details").text(($(".details").text() == "▲ DETAILS") ? "▼ DETAILS" : "▲ DETAILS");
+                if ($(window).scrollTop() > 100) {
+                    $("header").addClass("sticky")
+                }
+                else {
+                    $("header").removeClass("sticky")
+                }
+            })
+            // Toggles show/hide navbar on click of the burger menu
+            $("#menu-icon").click(function () {
+                $('.navbar-list').toggleClass("open");
+            })
+            // Hides navbar on scroll
+            $(window).scroll(function () {
+                $('.navbar-list').removeClass("open");
             });
 
-            // Hides additional info on RAM
-            $("#ram2").hide();
-            $(".ram2_text").hide();
-            $("#ram1").click(function () {
-                $("#ram2").show();
-                $("#ram1").hide();
-                $(".ram2_text").show();
-                $(".ram1_text").hide();
+            // Toggle hide/show for price of parts
+            $(".hide-price").hide();
+            $(".price").hide();
+            $(".show-price").click(function () {
+                $(".price").show();
+                $(".show-price").hide();
+                $(".hide-price").show();
             });
-            $("#ram2").click(function () {
-                $("#ram1").show();
-                $("#ram2").hide();
-                $(".ram2_text").hide();
-                $(".ram1_text").show();
-            });
-
-            // Hides additional info on storage
-            $("#storage2").hide();
-            $(".storage2_text").hide();
-            $("#storage1").click(function () {
-                $("#storage2").show();
-                $("#storage1").hide();
-                $(".storage2_text").show();
-                $(".storage1_text").hide();
-            });
-            $("#storage2").click(function () {
-                $("#storage1").show();
-                $("#storage2").hide();
-                $(".storage2_text").hide();
-                $(".storage1_text").show();
+            $(".hide-price").click(function () {
+                $(".show-price").show();
+                $(".hide-price").hide();
+                $(".price").hide();
             });
         })
     </script>
