@@ -223,13 +223,6 @@
             // Initial call to showSlides function
             showSlides();
 
-            // For dot click
-            $('.dot').on('click', function () {
-                // Update slide index based on the clicked dot
-                slideIndex = $(this).data('index');
-                // Call showSlides to display the selected slide
-                showSlides();
-            });
 
             // Handle form submission
             $('form').submit(function (event) {
